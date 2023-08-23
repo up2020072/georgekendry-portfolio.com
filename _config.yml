@@ -47,10 +47,10 @@ author_work_experiences:
 # Education
 author_education_details:
               - college_logo: mit.png
-                college_name: MIT
+                college_name: University Of Portsmouth
                 college_url: https://mit.org
-                college_degree: CS Engineer
-                description: Bachelor of Technology
+                college_degree: BSc (Hons) Computer Games Technology
+                description: Passed with 2:1
                 visibility: true
 
 # Projects
