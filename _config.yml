@@ -12,13 +12,9 @@ urls:
       url: /
     - text: About
       url: /about
-    - text: Blog
-      url: /blog
-    - text: Gallery
+    - text: Portfolio
       url: /gallery
-    - text: Shop
-      url : /shop
-    - text: Contact
+    - text: CV
       url : /contact
 
 
