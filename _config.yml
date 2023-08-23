@@ -46,9 +46,9 @@ author_work_experiences:
 
 # Education
 author_education_details:
-              - college_logo: mit.png
+              - college_logo: port.png
                 college_name: University Of Portsmouth
-                college_url: https://mit.org
+                college_url: https://www.port.ac.uk/
                 college_degree: BSc (Hons) Computer Games Technology
                 description: Passed with 2:1
                 visibility: true
