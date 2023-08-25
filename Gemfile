@@ -6,7 +6,7 @@ gem 'faraday-retry'
 gem 'backports', '~> 3.23'
 gem 'kramdown'
 gem 'puma'
-
+gem 'sass-embedded'
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
