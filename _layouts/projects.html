@@ -1,0 +1,185 @@
+---
+layout: default
+---
+<div class="jumbotron jumbotron-fluid" style="text-align: center;">
+    <!---------------------------------------->
+    <!--MASTHEAD VIDEO ON BACKGROUND-->
+    <!---------------------------------------->
+    <video id="video-background" autoplay muted playsinline loop>
+        <source src="{{site.url}}{{site.baseurl}}/assets/img/showreel.mp4" type="video/mp4">
+        <source src="{{site.url}}{{site.baseurl}}/assets/img/showreel.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+    </video>
+    <script>document.getElementById('myvideo').play();</script>
+
+    <!---------------------------------------->
+    <!--TEXT AND PROFILE PICTURE-->
+    <!---------------------------------------->
+    <p class="jumbotron-heading" style="font-size: 50px !important">Projects</p>
+    <h4 style="color: black !important"><a href="#Games"><b>Games</b></a> / <a href="#OtherProjects"><b>Other Projects</b></a></h4>
+
+</div>
+
+
+<div class="jumbotron jumbotron-fluid" style="text-align: center; background-color: #292929f5; padding: 2rem 2rem !important">   
+    <a name="Games"><h1 class="panel-title">Games</h1></a>
+    <p class="panel-title">These are the games I have worked on. <br /> The games with the <img src="{{site.baseurl}}/assets/img/posts/icons/gizmos/gamepad24.png" alt="Play on browser" style=" border-radius: 5px; padding: 2px"> icon on them can be played on this website! </p>
+    <a href="#ProfessionalGames">Professional Games</a> / <a href="#PersonalGames">Personal Games</a>
+</div>
+
+<div class="panel-heading active" role="tab" id="headingOne" style="padding:10px">
+    <h2 class="panel-title" style="word-wrap: normal; padding: 15px; background-color: #292929f5">
+        <a name="ProfessionalGames" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseProGames" aria-expanded="true" aria-controls="collapseProGames" style="font-size: 18px; padding: 0px !important">
+            Professional Games
+        </a>
+    </h2>
+</div>
+<div id="collapseProGames" class="panel-collapse collapse show" role="tabpanel" aria-labelledby="headingOne">
+    <div class="panel-body">
+        <div class="row" id="blog-posts-container" style="padding-top: 20px; padding-bottom: 20px;">
+            <div style="padding-left: 30px; padding-right: 30px">
+                <div class="row">
+                    {% for game in site.author_professional_games %} {% if game.visibility == true %}
+                    <div class="project-card project-post" style="border-radius: 50px">
+                        <a href="{{site.baseurl}}{{game.game_blog}}" target="_blank" style="margin: 0px; padding: 0px; text-decoration:none">
+                            <img class="card-img-top" src="{{site.baseurl}}/assets/img{{game.game_thumbnail}}" style="border-radius: 30px">
+                        </a>
+                        <div class="card-body center">
+                            {% if game.further_info == true %}
+                            <a href="" target="_blank" data-toggle="modal" data-target="#exampleModalLong{{game.further_info_tag}}" style="padding: 0px">
+                                <h4 class="card-title">{{game.game_title}}</h4>
+                            </a>
+                            {% else %}
+                            <a href="{{site.baseurl}}{{game.game_blog}}" target="_blank" data-disqus-identifier="{{ post.url }}" style="padding: 0px">
+                                <h4 class="card-title">{{game.game_title}}</h4>
+                            </a>
+                            {% endif %}
+
+                            <h6 class="card-subtitle mb-2 text-muted">{{ game.game_release | date: "%b %-d, %Y" }}</h6>
+                            <small class="btn btn-col" style="font-size: small; padding: .1rem .3rem; display:inline; background-color: dimgray">{{ game.game_studio }}</small>
+
+                            {% if game.further_info == true %}
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModalLong{{game.further_info_tag}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content" style="background-color: #202022 !important">
+                                        <div class="modal-header" style="border-bottom-color: #2e2e2e !important">
+                                            <h5 class="modal-title" id="exampleModalLongTitle">Further Information</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            {%- include {{game.further_info_page}} -%}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endif %}
+
+                        </div>
+                    </div>
+                    {% endif %} {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="panel-heading active" role="tab" id="headingOne" style="padding:10px">
+    <h2 class="panel-title" style="word-wrap: normal; padding: 15px; background-color: #292929f5">
+        <a name="PersonalGames" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsePerGames" aria-expanded="true" aria-controls="collapsePerGames" style="font-size: 18px; padding: 0px !important">
+            Personal Games
+        </a>
+    </h2>
+</div>
+<div id="collapsePerGames" class="panel-collapse collapse show" role="tabpanel" aria-labelledby="headingOne">
+    <div class="panel-body">
+        <div class="row" id="blog-posts-container" style="padding-top: 20px; padding-bottom: 20px">
+            <div style="padding-left: 30px; padding-right: 30px">
+                <div class="row">
+                    {% for post in site.categories.game-development %} {% if post.personalProject != false %}
+                    <div class="project-card project-post" style="border-radius: 50px">
+                        <a href="{{ post.url | prepend: site.baseurl }}" target="_blank" style="margin: 0px; padding: 0px; text-decoration:none">
+                            <div style="position: relative">
+                                <img class="card-img-top" src="{{site.url}}{{site.baseurl}}{{ post.thumbnail }}" alt="{{ post.title }}" style="border-radius: 30px; position: relative">
+                                {% if post.browser_playable == true %}
+                                <img src="{{site.baseurl}}/assets/img/posts/icons/gizmos/gamepad32.png" alt="Play on browser" id="lib-small-image" style="position: absolute; background-color: rgba(255, 255, 255, .4); border-radius: 5px; padding: 5px">
+                                {% endif %}
+                            </div>
+                        </a>
+
+                        <div class="card-body center">
+                            <a href="{{ post.url | prepend: site.baseurl }}" data-disqus-identifier="{{ post.url }}" style="padding: 0px">
+                                <h4 class="card-title">
+                                    {% if post.hasRepository == true %}
+                                    <i class="fab fa-github"></i>
+                                    {% endif %}
+                                    {{post.title}}
+                                </h4>
+                            </a>
+                            <h6 class="card-subtitle mb-2 text-muted">{{ post.date | date: "%b %-d, %Y" }}</h6>
+
+                            <div class="post-categories" style="vertical-align:bottom; text-align:center">
+                                {% if post %} {% assign genre = post.genre %} {% else %} {%
+                                assign genre = page.genre %} {% endif %} {% for
+                                genre in genre %}
+                                <small class="btn btn-col" style="font-size: small; padding: .1rem .3rem; display:inline; background-color: darkslategrey">{{genre}}</small>
+                                {% unless forloop.last %}&nbsp;{% endunless %} {% endfor %}
+                            </div>
+
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="jumbotron jumbotron-fluid" style="text-align: center; background-color: #292929f5; padding: 2rem 2rem !important">
+    <a name="OtherProjects"><h1 class="panel-title">Other Projects</h1></a>
+</div>
+<div id="collapseOther" class="panel-collapse collapse show" role="tabpanel" aria-labelledby="headingOne">
+    <div class="panel-body">
+        <div class="row" id="blog-posts-container" style="padding-top: 20px; padding-bottom: 20px">
+            <div style="padding-left: 30px; padding-right: 30px">
+                <div class="row">
+                    {% for post in site.categories.other %}
+                    <div class="project-card project-post" style="border-radius: 50px">
+                        <a href="{{ post.url | prepend: site.baseurl }}" target="_blank" style="margin: 0px; padding: 0px; text-decoration:none">
+                            <div style="position: relative">
+                                <img class="card-img-top" src="{{site.url}}{{site.baseurl}}{{ post.thumbnail }}" alt="{{ post.title }}" style="border-radius: 30px; position: relative">
+                            </div>
+                        </a>
+
+                        <div class="card-body center">
+                            <a href="{{ post.url | prepend: site.baseurl }}" data-disqus-identifier="{{ post.url }}" style="padding: 0px">
+                                <h4 class="card-title">
+                                    {% if post.hasRepository == true %}
+                                    <i class="fab fa-github"></i>
+                                    {% endif %}
+                                    {{post.title}}
+                                </h4>
+                            </a>
+                            <h6 class="card-subtitle mb-2 text-muted">{{ post.date | date: "%b %-d, %Y" }}</h6>
+
+                            <div class="post-categories" style="vertical-align:bottom; text-align:center">
+                                {% if post %} {% assign genre = post.genre %} {% else %} {%
+                                assign genre = page.genre %} {% endif %} {% for
+                                genre in genre %}
+                                <small class="btn btn-col" style="font-size: small; padding: .1rem .3rem; display:inline; background-color: darkslategrey">{{genre}}</small>
+                                {% unless forloop.last %}&nbsp;{% endunless %} {% endfor %}
+                            </div>
+
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{%- include contact_me_footer.html -%}
