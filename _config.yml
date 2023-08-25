@@ -12,10 +12,10 @@ urls:
       url: /
     - text: About
       url: /about
-    - text: Portfolio
-      url: /gallery
+    - text: Projects
+      url: /projects
     - text: CV
-      url : /contact
+      url : /cv
 
 
 # Edit Author details (For multi authors check _data/authors.yml)
