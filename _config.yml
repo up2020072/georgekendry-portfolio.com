@@ -1,5 +1,5 @@
 title: George Kendry
-subtitle: Game Developer
+subtitle: Game Developer Test
 description: >- # this means to ignore newlines until "baseurl:"
   devlopr-jekyll is a beautiful Jekyll Theme Built For Developers, which is optimized for speed and readability.
 
@@ -13,7 +13,7 @@ urls:
     - text: About
       url: /about
     - text: Projects
-      url: /projects
+      url: /gallery
     - text: CV
       url : /cv
 
