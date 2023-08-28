@@ -26,7 +26,7 @@ author_bio: Work in progress
 author_email: "mail@sujaykundu.com"
 author_location: United Kingdom
 author_website_url: "https://sujaykundu.com" #may want a work specific email
-typewrite-text: devlopr is a jekyll framework built for developers. You can edit this in _config.yml file
+typewrite-text: test
 hero_cover_img: sample_cover.jpg # replace this for changing homepage cover (eg. try cover.jpeg). Image should be in /assets/img
 
 # Experiences
