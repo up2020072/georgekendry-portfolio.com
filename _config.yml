@@ -1,5 +1,5 @@
 title: George Kendry
-subtitle: Game Developer Test
+subtitle: Game Developer
 description: >- # this means to ignore newlines until "baseurl:"
   devlopr-jekyll is a beautiful Jekyll Theme Built For Developers, which is optimized for speed and readability.
 
@@ -21,11 +21,11 @@ urls:
 # Edit Author details (For multi authors check _data/authors.yml)
 
 author_logo: profile.png
-author: John Doe test
-author_bio: Hi, my name is John Doe. I built this site using devlopr-jekyll :D
+author: George Kendry
+author_bio: Work in progress
 author_email: "mail@sujaykundu.com"
-author_location: India
-author_website_url: "https://sujaykundu.com"
+author_location: United Kingdom
+author_website_url: "https://sujaykundu.com" #may want a work specific email
 typewrite-text: devlopr is a jekyll framework built for developers. You can edit this in _config.yml file
 hero_cover_img: sample_cover.jpg # replace this for changing homepage cover (eg. try cover.jpeg). Image should be in /assets/img
 
@@ -46,10 +46,11 @@ author_work_experiences:
 
 # Education
 author_education_details:
-              - college_logo: port.jpg
+              - college_logo: uop.png
                 college_name: University Of Portsmouth
                 college_url: https://www.port.ac.uk/
                 college_degree: BSc (Hons) Computer Games Technology
+                study_duration: 2020 - 2023
                 description: Passed with 2:1
                 visibility: true
 
