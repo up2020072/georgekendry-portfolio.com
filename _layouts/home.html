@@ -1,5 +1,5 @@
 ---
-layout: full-width
+layout: default
 ---
 
 <script>
@@ -9,8 +9,48 @@ layout: full-width
     });
   });
 </script>
-    <!-- hero section-->
-    {%- include hero.html -%}
-    <div class="col-lg-8 offset-md-2">
-      {%- include recent_articles.html -%}
-    </div>
+<div class="jumbotron" style="text-align: center;">
+
+  <!---------------------------------------->
+  <!--MASTHEAD VIDEO ON BACKGROUND-->
+  <!---------------------------------------->
+  <video id="video-background" autoplay muted playsinline loop>
+      <source src="{{site.url}}{{site.baseurl}}/assets/img/showreel.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+  </video>
+  <script>document.getElementById('myvideo').play();</script>
+
+  <!---------------------------------------->
+  <!--TEXT AND PROFILE PICTURE-->
+  <!---------------------------------------->
+  <h1 class="main-title">{{site.author}}</h1>
+  <!--<p class="lead" id="typewriteText"></p>-->
+  <p class="lead">Game Developer</p>
+
+  <!---------------------------------------->
+  <!--SOCIAL MEDIA LINKS-->
+  <!---------------------------------------->
+  <p class="profile-links">
+      {% if site.twitter_username %}
+      <a class="social-link"
+         href="http://twitter.com/{{ site.twitter_username }}" target="_blank">
+          <i class="fab fa-twitter"></i>
+      </a>
+      {% endif %} {% if site.instagram_username %}
+      <a class="social-link"
+         href="http://instagram.com/{{ site.instagram_username }}" target="_blank">
+          <i class="fab fa-instagram"></i>
+      </a>   
+      {% endif %} {% if site.github_username %}
+      <a class="social-link"
+         href="http://github.com/{{ site.github_username }}" target="_blank">
+          <i class="fab fa-github"></i>
+      </a>
+      {% endif %} {% if site.linkedin_username %}
+      <a class="social-link"
+         href="http://linkedin.com/in/{{ site.linkedin_username }}" target="_blank">
+          <i class="fab fa-linkedin-in"></i>
+      </a>
+      {% endif %}
+  </p>
+</div>

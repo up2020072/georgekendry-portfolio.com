@@ -1,6 +1,6 @@
 # Add Authors here
 johndoe:
-   name: John Doe
+   name: John Doe test
    username: johndoe
    site: http://johndoe.com
    avatar: johndoe.png
@@ -8,7 +8,7 @@ johndoe:
    email: mail@johndoe.com
    social:
       - title: "github"
-        url: "https://github.com/johndoe"
+        url: "https://github.com/up2020072"
       - title: "linkedin"
         url: "https://www.linkedin.com/in/johndoe"
       - title: "youtube"
@@ -39,7 +39,7 @@ xplor4r:
    email: mail@sujaykundu.com
    social:
       - title: "github"
-        url: "https://github.com/sujaykundu777"
+        url: "https://github.com/up2020072"
       - title: "linkedin"
         url: "https://www.linkedin.com/in/sujaykundu"
       - title: "youtube"
