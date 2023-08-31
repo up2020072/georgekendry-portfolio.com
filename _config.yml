@@ -78,6 +78,38 @@ author_professional_games:
                 further_info_tag: qinetiq
                 further_info_page: missing_page.html
                 visibility: true
+              - game_thumbnail: /google.png #/projects/missing.png
+                game_title: QinetiQ Client Project
+                game_studio: QinetiQ #not a game studio which should be noted
+                game_release: May 5, 2023              
+                further_info: true
+                further_info_tag: qinetiq
+                further_info_page: missing_page.html
+                visibility: true
+              - game_thumbnail: /google.png #/projects/missing.png
+                game_title: QinetiQ Client Project
+                game_studio: QinetiQ #not a game studio which should be noted
+                game_release: May 5, 2023              
+                further_info: true
+                further_info_tag: qinetiq
+                further_info_page: missing_page.html
+                visibility: true
+              - game_thumbnail: /google.png #/projects/missing.png
+                game_title: QinetiQ Client Project
+                game_studio: QinetiQ #not a game studio which should be noted
+                game_release: May 5, 2023              
+                further_info: true
+                further_info_tag: qinetiq
+                further_info_page: missing_page.html
+                visibility: true
+              - game_thumbnail: /google.png #/projects/missing.png
+                game_title: QinetiQ Client Project
+                game_studio: QinetiQ #not a game studio which should be noted
+                game_release: May 5, 2023              
+                further_info: true
+                further_info_tag: qinetiq
+                further_info_page: missing_page.html
+                visibility: true
                 
 
 

@@ -136,7 +136,7 @@ body {
     hanging-punctuation: first last;
     height: 100%;
     line-height: 1.35em;
-    margin: 0;
+    margin: 40;
     text-rendering: optimizeLegibility;
     padding-top:33px;
     overflow-x:hidden;
@@ -768,6 +768,7 @@ header {
     //margin-left: -35px;
 }
 
+
 .snipcart-modal__container {
     position: fixed;
     top: 0;
@@ -950,9 +951,9 @@ header {
     padding-left: 50px !important;
 }
 
-// #blog-posts-container{
-//     margin-left:20px !important;
-// }
+#blog-posts-container{
+     margin-left: -20px !important;
+}
 
 #article-container{
     display: grid;
@@ -1065,10 +1066,6 @@ header {
     width: 45%;
     height: auto;
     margin: 20px auto !important;
-}
-
-.blog-post:hover {
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 .project-post {
