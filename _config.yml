@@ -13,7 +13,7 @@ urls:
     - text: About
       url: /about
     - text: Projects
-      url: /gallery
+      url: /projects
     - text: CV
       url : /cv
 
@@ -23,9 +23,9 @@ urls:
 author_logo: profile.png
 author: George Kendry
 author_bio: Work in progress
-author_email: "mail@sujaykundu.com"
+author_email: "mail@sujaykundu.com"#may want a work specific email
 author_location: United Kingdom
-author_website_url: "https://sujaykundu.com" #may want a work specific email
+author_website_url: "https://www.georgekendry-portfolio.com/" 
 typewrite-text: test
 hero_cover_img: sample_cover.jpg # replace this for changing homepage cover (eg. try cover.jpeg). Image should be in /assets/img
 
@@ -55,7 +55,8 @@ author_education_details:
                 visibility: true
 
 # Projects
-author_project_details:
+#the projects that show up on the main page - could be done dynamically however these require extra info
+author_project_details: 
               - project_thumbnail: gamershub.png
                 project_title: Gamers Hub
                 project_description: A Platform built for Gamers and Game Devs
@@ -66,6 +67,20 @@ author_project_details:
                 project_description: A Platform built for Hackers and Penetration Testers
                 project_url: https://hack4r.com
                 visibility: true
+
+# Professional Games
+author_professional_games: 
+              - game_thumbnail: /google.png #/projects/missing.png
+                game_title: QinetiQ Client Project
+                game_studio: QinetiQ #not a game studio which should be noted
+                game_release: May 5, 2023              
+                further_info: true
+                further_info_tag: qinetiq
+                further_info_page: missing_page.html
+                visibility: true
+                
+
+
 
 # social links
 twitter_username: johndoe
