@@ -238,8 +238,16 @@ small{
 }
 
 .jumbotron-heading{
+    color: #111;
     font-size: 35px;
 }
+
+.jumbotron-game-title {
+    color: #111;
+    font-size: 50px;
+    margin-top: 120px;
+}
+
 
 .main-title{
     font-size: 70px;
@@ -278,6 +286,10 @@ header {
     padding: 20px !important;
     background-color: var(--card-background-color) !important;
 }
+.card-img-top {
+    height: 260px;
+    object-fit: cover;
+}
 
 li {
     margin-top: 15px;
@@ -290,6 +302,8 @@ li-n {
 
 .row {
     display: flex;
+    align-items: center;
+    justify-content: flex-start;
     padding: 0 4px; 
 }
 
@@ -482,6 +496,17 @@ details > summary
     word-spacing: 3px;
     text-decoration: none;
 }
+.panel-title-main {
+    display: block !important;
+    padding: 15px;
+    color: #bbbbbb !important;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    text-decoration: none;
+}
 
 //Part of the collapsible group items
 .panel-heading a:before {
@@ -521,7 +546,7 @@ header {
     margin: 10px !important;
     padding: 15px;
     background-color: var(--card-background-color) !important;
-    display: inline-table !important;
+    display: inline-table;
 }
 
 .libcard {
@@ -592,9 +617,12 @@ header {
     height: 50px;
 }
 
+
 .btn-dark {
-    background-color:var(--button-background-color) !important;
+    background-color: var(--button-background-color) !important;
     color: var(--bold-color) !important;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .img-thumbnail {
@@ -1048,6 +1076,24 @@ header {
     }
 }
 
+#lib-images-container {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+#lib-big-image {
+    position: relative; /* position:absolute aligns to the parent container
+                          which in the HTML above is the <div> element */
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+}
+#lib-small-image {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1;
+}
 
 .company-logo {
     width: 100px;
@@ -1404,6 +1450,7 @@ footer {
     line-height: 20px !important;
 }
 
+
  .switch {
      position: relative;
      width: 80px;
@@ -1443,6 +1490,26 @@ footer {
      animation: off .7s forwards cubic-bezier(.8, .5, .2, 1.4);
      box-shadow: inset 5px -5px 4px rgba(53, 53, 53, 0.3);
  }
+
+
+.btn-col {
+    background-color: #f8430aa1;
+    color: white !important;
+    width: 33.3%;
+    box-sizing: border-box;
+}
+
+.status-button {
+    font-size: small !important;
+    padding: .1rem .5rem !important;
+    display: inline !important;
+    background-color: darkslategrey !important;
+    margin: 10px !important;
+}
+ 
+.genre-button{
+    color: white !important;
+}
 
  @keyframes off {
      0% {

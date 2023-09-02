@@ -36,5 +36,38 @@ layout: compress
       });
     }
   </script>
+  {% if page.url == "/projects/" %}
+  <script>
+      document.addEventListener('DOMContentLoaded', function () {
+      const genreButtons = document.querySelectorAll('.genre-button');
+      const posts = document.querySelectorAll('.project-post');
+
+      let selectedGenre = [];
+
+      genreButtons.forEach(button => {
+          button.addEventListener('click', function () {
+              if (selectedGenre.includes(this.dataset.genre)) {
+                  button.style.backgroundColor = 'darkslategrey';
+
+                  selectedGenre = selectedGenre.filter(genre => genre != this.dataset.genre);
+              } 
+              else {
+                selectedGenre.push(this.dataset.genre);
+
+                genreButtons.forEach(button => {
+                    button.style.backgroundColor = selectedGenre.includes(button.dataset.genre) ? 'red' : 'darkslategrey';
+                });
+              }
+              posts.forEach(post => {
+                  const postGenres = post.dataset.genres.split(',');
+                  post.style.display = (selectedGenre.length == 0 || postGenres.some(genre => selectedGenre.includes(genre))) ? 'block' : 'none';
+              });
+              console.log(selectedGenre);
+          });
+      });
+  });
+
+  </script>
+  {% endif %}
   </body>
 </html>
