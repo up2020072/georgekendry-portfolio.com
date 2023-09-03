@@ -33,8 +33,9 @@ layout: default
                     {% for game in site.author_professional_games %} {% if game.visibility == true %}
                     <div class="project-card project-post" style="border-radius: 50px" data-genres="{{ post.genre | join: ',' }}">
                         <a href="{{site.baseurl}}{{game.game_blog}}" target="_blank" style="margin: 0px; padding: 0px; text-decoration:none">
-                            <img class="card-img-top" src="{{site.baseurl}}/assets/thumbnails/{{post.title}}.png" style="border-radius: 30px">
+                            <img class="card-img-top" src="{{site.baseurl}}/assets/img/thumbnails/{{game.game_title}}.png" style="border-radius: 30px">
                         </a>
+                        <hr>
                         <div class="card-body center">
                             {% if game.further_info == true %}
                             <a href="" target="_blank" data-toggle="modal" data-target="#exampleModalLong{{game.further_info_tag}}" style="padding: 0px">
@@ -99,7 +100,7 @@ layout: default
                                 {% endif %}
                             </div>
                         </a>
-
+                        <hr>
                         <div class="card-body center">
                             <a href="{{ post.url | prepend: site.baseurl }}" data-disqus-identifier="{{ post.url }}" style="padding: 0px">
                                 <h4 class="card-title">

@@ -70,7 +70,7 @@ author_project_details:
 
 # Professional Games
 author_professional_games: 
-              - game_thumbnail: /google.png #/projects/missing.png
+              - game_thumbnail: /thumbnails/VR Project.png
                 game_title: QinetiQ Client Project
                 game_studio: QinetiQ #not a game studio which should be noted
                 game_release: May 5, 2023              

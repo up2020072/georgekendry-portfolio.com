@@ -6,7 +6,7 @@ color: "background-color: seagreen"
 summary: "Infinite scrolling world generation project developed for my dissertation."
 author: georgekendry
 date: '2023-06-28'
-category: ['game-development']
+category: ['game-development','featured']
 thumbnail:
 keywords: C#, Unity, Unity DOTS, project
 permalink: /games/terrain-project/

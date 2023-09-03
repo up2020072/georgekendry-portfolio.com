@@ -59,7 +59,7 @@ layout: default
                   <div class="project-card project-post" style="border-radius: 50px" data-genres="{{ post.genre | join: ',' }}">
                       <a href="{{ post.url | prepend: site.baseurl }}" target="_blank" style="margin: 0px; padding: 0px; text-decoration:none">
                           <div style="position: relative">
-                              <img class="card-img-top" src="{{site.baseurl}}/assets/img{{post.thumbnail}}" alt="{{ post.title }}" style="border-radius: 30px; position: relative">
+                              <img class="card-img-top" src="{{site.baseurl}}/assets/img/thumbnails/{{post.title}}.png" alt="{{ post.title }}" style="border-radius: 30px; position: relative">
                               {% if post.browser_playable == true %}
                               <img src="{{site.baseurl}}/assets/img/icons/controller_icon.svg" alt="Play on browser" id="lib-small-image" style="position: absolute; bottom: -10px; right: -10px; z-index: 1; width: 60px; color: orange; border-radius: 5px; padding: 5px">
                               {% endif %}

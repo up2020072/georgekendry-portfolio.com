@@ -903,6 +903,12 @@ header {
     -moz-osx-font-smoothing: grayscale;
     color: coral;
 }
+hr {
+    border: none;
+    height: 3px;
+    background-color: #666666;
+    margin-bottom: -0.5rem !important;
+}
 
 .product{
     width: 29%;
@@ -1090,8 +1096,8 @@ header {
 }
 #lib-small-image {
     position: absolute;
-    bottom: 10px;
-    right: 10px;
+    bottom: 5px !important;
+    right: 5px !important;
     z-index: 1;
 }
 
