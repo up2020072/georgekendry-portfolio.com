@@ -25,6 +25,12 @@ projecttype: "Game Jam"
 languagesused: ['C#']
 tools: ['Unity DOTS']
 roles: ['Programming', 'Art', 'Design']
+main-role: "Lead Developer"
 credits: ['George Kendry']
 screenshots: true
+description: <ul> 
+                <li>Currently developing entity AI using Unity DOTS</li>
+                <li>Worked on creating immersive procedural terrain generation using Perlin noise</li>
+                <li>Developed and optimised a save system to ensure maximum data compression</li>
+             </ul>
 ---

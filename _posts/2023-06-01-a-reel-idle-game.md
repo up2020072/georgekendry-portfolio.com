@@ -25,6 +25,11 @@ projecttype: "Game Jam"
 languagesused: ['C#']
 tools: ['Unity']
 roles: ['Programming','Art','Design']
+main-role: "Lead Developer"
 credits: ['George Kendry']
 screenshots: true
+description: <ul> 
+                <li>Developed a custom maths library to facilitate unique gameplay elements</li>
+                <li>Ensured UI/UX design was intuitive and responsive for mobile</li>
+             </ul>
 ---
