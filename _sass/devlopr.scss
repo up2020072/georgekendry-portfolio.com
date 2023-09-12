@@ -467,12 +467,18 @@ hr {
     background-color: #3b3b3b !important;
     border-top: 2px solid rgba(0,0,0,.1) !important
 }
+.card-cv {
+    padding: 5px !important;
+}
 
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
     .column {
         flex: 50%;
         max-width: 50%;
+    }
+    .card-cv {
+        width: -webkit-fill-available !important;
     }
 }
 
@@ -488,6 +494,14 @@ hr {
     .col-md-2 {
         display: flex;
         justify-content: center;
+    }
+    .featured-card-img-top {
+        height: 200px;
+        width: 200px !important; //should be % based
+        object-fit: cover;
+    }
+    .featured-project-card{
+        height: fit-content !important;
     }
 }
 
