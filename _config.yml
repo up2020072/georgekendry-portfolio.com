@@ -22,7 +22,11 @@ urls:
 
 author_logo: profile.png
 author: George Kendry
-author_bio: Work in progress
+author_bio: "Recently graduated undergraduate student: specializing in the development, and implementation of innovative gameplay systems,
+emphasising optimised, maintainable code. I’ve successfully collaborated with—and led—small teams to deploy a vast array of
+gameplay demos across multiple platforms. Actively seeking a challenging development role; to further leverage and expand my
+skill set."
+
 author_email: "georgekendry24@gmail.com"
 author_location: United Kingdom
 author_website_url: "https://www.georgekendry-portfolio.com/" 

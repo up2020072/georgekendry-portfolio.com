@@ -109,6 +109,34 @@ layout: default
       <hr>
       <p>{{ site.author_bio }}</p>
     </div>
+    <div class="panel-heading active" role="tab" id="headingOne" style="text-align: center; padding:10px">
+      <h2 class="panel-title-main" style="font-size: 18px; word-wrap: normal; padding: 15px; background-color: #292929f5">
+          Education
+      </h2>
+    </div>
+    {% for detail in site.author_education_details %}
+    <div class="card">
+      <div class="row">
+        <div class="col-md-2">
+          <img
+            src="{{site.url}}{{site.baseurl}}/assets/img/{{ detail.college_logo}}"
+            class="card-img-small"
+          />
+        </div>
+        <div class="col-md-6">
+          <h4 class="experience-title">{{detail.college_degree }}</h4>
+          <h6 class="experience-info">{{detail.college_name}}</h6>
+          <small class="experience-info">{{detail.study_duration}}</small>
+          <p class="experience-desc">{{detail.description}}</p>
+          <small><a href="{{detail.college_url}}">{{ detail.college_url}}</a></small>
+        </div>
+      </div>
+    </div>
+    {% if site.author_education_details.size > 1 and forloop.last == false %}
+      <hr style="background-color: #2e2e2e !important">
+    {% endif %}
+    {% endfor %}
+
 
     <div class="panel-heading active" role="tab" id="headingOne" style="text-align: center; padding:10px">
       <h2 class="panel-title-main" style="font-size: 18px; word-wrap: normal; padding: 15px; background-color: #292929f5">
@@ -177,35 +205,6 @@ layout: default
       {% endif %}
       {% endfor %}
     {% endif %}
-
-
-    <div class="panel-heading active" role="tab" id="headingOne" style="text-align: center; padding:10px">
-      <h2 class="panel-title-main" style="font-size: 18px; word-wrap: normal; padding: 15px; background-color: #292929f5">
-          Education
-      </h2>
-    </div>
-    {% for detail in site.author_education_details %}
-    <div class="card">
-      <div class="row">
-        <div class="col-md-2">
-          <img
-            src="{{site.url}}{{site.baseurl}}/assets/img/{{ detail.college_logo}}"
-            class="card-img-small"
-          />
-        </div>
-        <div class="col-md-6">
-          <h4 class="experience-title">{{detail.college_degree }}</h4>
-          <h6 class="experience-info">{{detail.college_name}}</h6>
-          <small class="experience-info">{{detail.study_duration}}</small>
-          <p class="experience-desc">{{detail.description}}</p>
-          <small><a href="{{detail.college_url}}">{{ detail.college_url}}</a></small>
-        </div>
-      </div>
-    </div>
-    {% if site.author_education_details.size > 1 and forloop.last == false %}
-      <hr style="background-color: #2e2e2e !important">
-    {% endif %}
-    {% endfor %}
     {% endif %}
   </div>
 </div>
