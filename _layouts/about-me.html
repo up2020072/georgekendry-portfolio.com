@@ -2,7 +2,7 @@
 layout: default
 ---
 <div class="col-lg-12">
-<div class="row">
+<div class="row" style="align-items: flex-start;">
   <div class="col-lg-4">
     <div class="card" id="profile-card">
       <a href="/">
@@ -93,86 +93,104 @@ layout: default
       {% endif %}
     </div>
 
-    <div class="card">
-      <h1>Skills</h1>
 
-      {%- include author_skills.html -%}
+    <div class="panel-heading active" role="tab" id="headingOne" style="text-align: center; padding:10px">
+      <h2 class="panel-title-main" style="font-size: 18px; word-wrap: normal; padding: 15px; background-color: #292929f5">
+          Skills
+      </h2>
     </div>
+    {%- include author_skills.html -%}
 
-    {% if site.wakatime_username %}
-    <div class="card">
-      <h1>Coding Activity</h1>
-
-      {%- include coding_activity.html -%}
-    </div>
-    {% endif %}
   </div>
   <div class="col-lg-8">
     {% if site.author_bio %}
     <div class="card">
       <h1 class="card-title">About</h1>
+      <hr>
       <p>{{ site.author_bio }}</p>
     </div>
-    {% endif %} {% if site.show_author_project_details == true %}
-    <div id="author_projects" class="card">
-      <h1 class="card-title">Projects</h1>
-      <br />
-      {% for project in site.author_project_details %} {% if project.visibility
-      == true %}
-      <div class="row" id="project-card">
+
+    <div class="panel-heading active" role="tab" id="headingOne" style="text-align: center; padding:10px">
+      <h2 class="panel-title-main" style="font-size: 18px; word-wrap: normal; padding: 15px; background-color: #292929f5">
+          Featured Projects
+      </h2>
+    </div>
+
+    {% for post in site.categories.featured %}
+    <div class="card">
+      <div class="row" style="justify-content: space-between;">
         <div class="col-md-6">
-          <img
-            src="{{site.url}}{{site.baseurl}}/assets/img/{{project.project_thumbnail}}"
-            class="project-img"
-          />
+          <a href="{{ post.url | prepend: site.baseurl }}" target="_blank" style="margin: 0px; padding: 0px; text-decoration:none">
+            <a href="{{ post.url | prepend: site.baseurl }}" data-disqus-identifier="{{ post.url }}" style="padding: 0px">
+                <h4 class="featured-card-title">
+                    {{post.title}}
+                </h4>
+            </a>
         </div>
-        <div class="col-md-4 center">
-          <h4 class="experience-title">{{ project.project_title }}</h4>
-          <h6 class="experience-info">{{ project.project_info}}</h6>
-          <p class="experience-desc">{{ project.project_description }}</p>
-          <p>
-            <a class="project-link" href="{{project.project_url}}"
-              >{{ project.project_url}}</a
-            >
-          </p>
+        <div class="col-md-6" style="vertical-align:top; text-align:right">
+          <h6 class="card-subtitle mb-2 text-muted">{{ post.date | date: "%b %-d, %Y" }}</h6>
         </div>
       </div>
-      <br />
-      {% endif %} {% endfor %}
-    </div>
-    {% endif %} {% if site.show_author_work_experiences == true %}
-    <div class="card">
-      <h1 class="card-title">Work Experience</h1>
-      <br />
-      {% for exp in site.author_work_experiences %} {% if exp.visibility == true
-      %}
+      <h6 class="card-subtitle mb-2 text-muted" style="text-align:left; word-wrap: normal">{{ post.summary}}</h6>
+      <hr>
       <div class="row">
-        <div class="col-md-2">
-          <img
-            src="{{site.url}}{{site.baseurl}}/assets/img/{{ exp.company_logo }}"
-            class="company-logo"
-          />
+        <div class="col-md-2 column-two" style="max-width: 30%">
+          <img class="card-img-small" src="{{site.baseurl}}/assets/img/thumbnails/{{post.title}}.png" alt="{{ post.title }}" style="border-radius: 30px; position: relative">
         </div>
-        <div class="col-md-6">
-          <h4 class="experience-title">{{ exp.designation }}</h4>
-          <h6 class="experience-info">{{ exp.company_name}}</h6>
-          <p class="experience-desc">{{ exp.description }}</p>
-          <p><a href="{{exp.company_url}}">{{ exp.company_url}}</a></p>
+        <div class="column-two" style="max-width: 70%">
+          <h5 style="margin-top: 10px;">{{post.main-role}}</h5> 
+          <p class="experience-desc" style="text-align:left;">{{ post.description }}</p>
         </div>
       </div>
-      {% endif %} {% endfor %}
     </div>
-    {% endif %} {% if site.show_author_education_details == true %}
+    {% if site.categories.featured.size > 1 and forloop.last == false %}
+      <hr style="background-color: #2e2e2e !important">
+    {% endif %}
+    {% endfor %}
+    
+    {% if site.show_author_work_experiences %}
+      <div class="panel-heading active" role="tab" id="headingOne" style="text-align: center; padding:10px">
+        <h2 class="panel-title-main" style="font-size: 18px; word-wrap: normal; padding: 15px; background-color: #292929f5">
+            Work Experience
+        </h2>
+      </div>
+      {% for exp in site.author_work_experiences %}
+      <div class="card">
+        <div class="row">
+          <div class="col-md-2">
+            <img
+              src="{{site.url}}{{site.baseurl}}/assets/img/{{ exp.company_logo}}"
+              class="card-img-small"
+            />
+          </div>
+          <div class="col-md-6">
+            <h4 class="experience-title">{{exp.designation }}</h4>
+            <h6 class="experience-info">{{detail.college_name}}</h6>
+            <small class="experience-info">{{exp.company_name}}</small>
+            <p class="experience-desc">{{exp.description}}</p>
+            <small><a href="{{detail.college_url}}">{{ exp.company_url}}</a></small>
+          </div>
+        </div>
+      </div>
+      {% if site.author_work_experiences.size > 1 and forloop.last == false %}
+        <hr style="background-color: #2e2e2e !important">
+      {% endif %}
+      {% endfor %}
+    {% endif %}
+
+
+    <div class="panel-heading active" role="tab" id="headingOne" style="text-align: center; padding:10px">
+      <h2 class="panel-title-main" style="font-size: 18px; word-wrap: normal; padding: 15px; background-color: #292929f5">
+          Education
+      </h2>
+    </div>
+    {% for detail in site.author_education_details %}
     <div class="card">
-      <h1 class="card-title">Education</h1>
-      <br />
-      {% for detail in site.author_education_details %} {% if detail.visibility
-      == true %}
       <div class="row">
         <div class="col-md-2">
           <img
             src="{{site.url}}{{site.baseurl}}/assets/img/{{ detail.college_logo}}"
-            class="company-logo"
+            class="card-img-small"
           />
         </div>
         <div class="col-md-6">
@@ -183,8 +201,11 @@ layout: default
           <small><a href="{{detail.college_url}}">{{ detail.college_url}}</a></small>
         </div>
       </div>
-      {% endif %} {% endfor %}
     </div>
+    {% if site.author_education_details.size > 1 and forloop.last == false %}
+      <hr style="background-color: #2e2e2e !important">
+    {% endif %}
+    {% endfor %}
     {% endif %}
   </div>
 </div>

@@ -6,7 +6,7 @@ color: "background-color: seagreen"
 summary: "Demo project developed using the PS5 devkit."
 author: georgekendry
 date: '2022-08-01'
-category: ['professional-work','featured']
+category: ['game-development','featured']
 thumbnail:
 keywords: C++, PS5, Console
 permalink: /games/ps5-demo-project/

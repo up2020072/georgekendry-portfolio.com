@@ -286,6 +286,16 @@ header {
     padding: 20px !important;
     background-color: var(--card-background-color) !important;
 }
+.card-icon {
+    margin: 5px !important;
+    padding: 10px !important;
+    background-color: var(--card-background-color) !important;
+}
+.card-img-icon {
+    height: 64px;
+    width: 64px !important;
+    object-fit: cover;
+}
 .card-img-top {
     height: 260px;
     width: 260px !important; //should be % based
@@ -294,6 +304,11 @@ header {
 .featured-card-img-top {
     height: 300px;
     width: 360px !important; //should be % based
+    object-fit: cover;
+}
+.card-img-small {
+    height: 150px;
+    width: 150px !important; //should be % based
     object-fit: cover;
 }
 li {
@@ -448,6 +463,10 @@ details > summary
     float: left;
     margin: 10px;
 }
+hr {
+    background-color: #3b3b3b !important;
+    border-top: 2px solid rgba(0,0,0,.1) !important
+}
 
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
@@ -462,6 +481,13 @@ details > summary
     .column {
         flex: 100%;
         max-width: 100%;
+    }
+    .column-two { //overrides about page featured projects
+        max-width: 100% !important;
+    }
+    .col-md-2 {
+        display: flex;
+        justify-content: center;
     }
 }
 
@@ -556,7 +582,7 @@ header {
 .featured-project-card {
     margin: 10px !important;
     padding: 15px;
-    background-color: #292929f5; //var(--card-background-color) !important;
+    background-color: var(--card-background-color) !important;
     display: inline-table;
 }
 
@@ -926,6 +952,7 @@ hr {
     border: none;
     height: 3px;
     background-color: #666666;
+    margin-top: 0.5rem !important;
     margin-bottom: 0.5rem !important;
 }
 
@@ -1328,6 +1355,9 @@ footer {
             .jumbotron {
                 //padding: 10rem 1rem !important;
             }
+            .card-subtitle {
+                text-align: left;
+            }
 
 }
 
@@ -1408,6 +1438,9 @@ footer {
       .jumbotron {
           padding: 10rem 1rem !important;
       }
+      .card-subtitle {
+          text-align: left;
+      }
 
 }
 
@@ -1476,6 +1509,9 @@ footer {
             .product{
                 width: auto;
                 float:left;
+            }
+            .card-subtitle {
+                text-align: left;
             }
  }
 

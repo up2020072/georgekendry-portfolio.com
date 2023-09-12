@@ -23,7 +23,7 @@ urls:
 author_logo: profile.png
 author: George Kendry
 author_bio: Work in progress
-author_email: "mail@sujaykundu.com"#may want a work specific email
+author_email: "georgekendry24@gmail.com"
 author_location: United Kingdom
 author_website_url: "https://www.georgekendry-portfolio.com/" 
 typewrite-text: test
@@ -78,21 +78,53 @@ author_professional_games:
                 further_info_tag: qinetiq
                 further_info_page: missing_page.html
                 visibility: true
-                
 
+#skills section
 
+#languages
+skills_languages:
+              - skill_name: C#
+                skill_thumbnail: CSharp.png
+              - skill_name: C++
+                skill_thumbnail: C++.png
+              - skill_name: HTML
+                skill_thumbnail: HTML.png
+              - skill_name: CSS
+                skill_thumbnail: CSS.png
+              - skill_name: Javascript
+                skill_thumbnail: Javascript.png
+              
+#engines
+skills_engines:
+              - skill_name: Unity
+                skill_thumbnail: Unity.png
+              - skill_name: UE4
+                skill_thumbnail: UE4.png
 
+#enviroments
+skills_enviroments:
+              - skill_name: Visual Studio
+                skill_thumbnail: VisualStudio.png
+              - skill_name: Visual Studio Code
+                skill_thumbnail: VSCode.png
+
+#project managment
+skills_project_managment:
+              - skill_name: Git
+                skill_thumbnail: Git.png
+              - skill_name: Atlassian
+                skill_thumbnail: Atlassian.png
 # social links
-twitter_username: johndoe
-github_username:  sujaykundu777
-facebook_username: johndoe
-linkedin_username: johndoe
-behance_username: johndoe
-instagram_username: johndoe
-medium_username: johndoe
-telegram_username: johndoe
-dribbble_username: johndoe
-flickr_username: johndoe
+twitter_username: 
+github_username:  up2020072
+facebook_username: 
+linkedin_username: George Kendry
+behance_username: 
+instagram_username: 
+medium_username: 
+telegram_username: 
+dribbble_username: 
+flickr_username: 
 
 #for comments ( we got Disqus and Hyvor Commenting, uncomment the one you want to use )
 
@@ -119,7 +151,7 @@ highlighter: rouge
 permalink: pretty
 
 # Choose what to show ( can be true or false)
-show_author_work_experiences: true
+show_author_work_experiences: false
 show_author_education_details: true
 show_author_project_details: true
 
