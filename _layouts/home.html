@@ -61,10 +61,10 @@ layout: default
                         <a href="{{ post.url | prepend: site.baseurl }}" target="_blank" style="margin: 0px; padding: 0px; text-decoration:none">
                             <a href="{{ post.url | prepend: site.baseurl }}" data-disqus-identifier="{{ post.url }}" style="padding: 0px">
                                 <h4 class="featured-card-title">
-                                    {{post.title}}
                                     {% if post.hasNDA == true %}
                                     <i class="fa-solid fa-lock"></i>
                                     {% endif %}
+                                    {{post.title}}
                                 </h4>
                             </a>
                             <h6 class="card-subtitle mb-2 text-muted">{{ post.date | date: "%b %-d, %Y" }}</h6>

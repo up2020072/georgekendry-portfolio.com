@@ -14,7 +14,7 @@ usemathjax: true
 genre: ['C#', 'Unity', 'VR', 'XR']
 browser_playable: false
 hidden: true
-heading: "insert heading here"
+heading: 
 icon: 
 showreel:
 itch: 

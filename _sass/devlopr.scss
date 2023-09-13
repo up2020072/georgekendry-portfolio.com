@@ -519,10 +519,21 @@ hr {
     width: 100%;
 }
 
-//Part of the collapsible group items
+iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
 @media(max-width:992px) {
     .wrapper {
         width: 100%;
+    }
+    .card-game-embed {
+        display: none !important;
+    }
+    .offset-md-2 {
+        margin-left: 0px !important;
     }
 }
 

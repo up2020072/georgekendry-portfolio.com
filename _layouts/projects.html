@@ -60,6 +60,9 @@ layout: default
                                     {% if post.hasRepository == true %}
                                     <i class="fab fa-github"></i>
                                     {% endif %}
+                                    {% if post.hasNDA == true %}
+                                        <i class="fa-solid fa-lock"></i>
+                                    {% endif %}
                                     {{post.title}}
                                 </h4>
                             </a>
@@ -101,9 +104,6 @@ layout: default
                         <a href="{{ post.url | prepend: site.baseurl }}" target="_blank" style="margin: 0px; padding: 0px; text-decoration:none">
                             <div style="position: relative">
                                 <img class="card-img-top" src="{{site.baseurl}}/assets/img/thumbnails/{{post.title}}.png" alt="{{ post.title }}" style="border-radius: 30px; position: relative">
-                                {% if post.browser_playable == true %}
-                                <img src="{{site.baseurl}}/assets/img/icons/controller_icon.svg" alt="Play on browser" id="lib-small-image" style="position: absolute; bottom: -10px; right: -10px; z-index: 1; width: 60px; color: orange; border-radius: 5px; padding: 5px">
-                                {% endif %}
                             </div>
                         </a>
                         <hr>
@@ -113,7 +113,13 @@ layout: default
                                     {% if post.hasRepository == true %}
                                     <i class="fab fa-github"></i>
                                     {% endif %}
+                                    {% if post.hasNDA == true %}
+                                        <i class="fa-solid fa-lock"></i>
+                                    {% endif %}
                                     {{post.title}}
+                                    {% if post.browser_playable == true %}
+                                        <i class="fa-solid fa-gamepad fa-lg" style="margin-left: 5px;" ></i>
+                                    {% endif %}
                                 </h4>
                             </a>
                             <h6 class="card-subtitle mb-2 text-muted">{{ post.date | date: "%b %-d, %Y" }}</h6>

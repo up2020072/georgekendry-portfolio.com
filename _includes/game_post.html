@@ -80,13 +80,11 @@
         <div class="card-body" itemprop="articleBody">
 
             {% if page.isgameembed == true %}
-            <!---------------------------------------->
-            <!--GAME EMBED-->
-            <!---------------------------------------->
-            <div style="text-align: center; padding: 20px"> <iframe frameborder="0" src="{{ page.gameembed }}?color=1c1c1e" allowfullscreen="" width="1000" height="520"><a href="{{ game.itch }}">Play {{ game.title }} on itch.io</a></iframe> </div>
-            <hr>
+                <div class="card-game-embed">
+                    <div style=" padding: 20px; display: flex; justify-content: center; padding-bottom: 56.25%; width: 100%; position: relative;"> <iframe frameborder="0" src="{{ page.gameembed }}?color=1c1c1e" allowfullscreen=""><a href="{{ game.itch }}">Play {{ game.title }} on itch.io</a></iframe> </div>
+                </div>
             {% endif %}
-
+            <hr>
             {% if page.gamevideo != null %}
             <!--- ------------------------------------ -->
             <!--- Embed or Youtube Footage of the game -->
@@ -110,12 +108,12 @@
                 </h2>
             </div>
             <div id="collapseGameplayScreenshot" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                <div class="panel-body">
+                <div class="panel-body row" style="justify-content: space-evenly;">
                     {% if page.screenshots != false %} 
                         {% assign image_path = '/assets/img/screenshots/' | append: page.title | append: '/' %}
                         {% for image in site.static_files %}
                             {% if image.path contains image_path %} 
-                            <div class="widcard" style="background-color: #1c1c1e; margin-bottom: 0px !important">
+                            <div class="widcard col-lg-4" style="background-color: #1c1c1e; margin: 0px !important">
                                 <img src="{{ site.baseurl }}{{ image.path }}" style="max-width: -webkit-fill-available; box-shadow: 0px 0px 20px #202022;">
                             </div>
                             {% endif %}
