@@ -3,17 +3,25 @@ layout: default
 ---
 
 <div class="card" style="text-align:center">
-    <h1 class="page-title">Projects</h1>
     <div class="row" style="justify-content: space-evenly;">
         <div>
             <div class="column-two" style="text-align: center;">
-                <h4 class="featured-card-title">Filter: all/languages/tools/genres</h4>
+                <h3>Filter Selection:</h3>
                 {% assign processed_genres = "" | split: "," %}
                 {% for post in site.categories.game-development %}
                     {% if post %} {% assign genre = post.genre %} {% endif %} 
                     {% for genre in genre %}
                         {% unless processed_genres contains genre %}
-                            <small data-genre="{{ genre }}" class="btn btn-col genre-button" style="font-size: small; padding: .1rem .3rem; display:inline; background-color: darkslategrey">{{ genre }}</small>
+                            <small data-genre="{{ genre }}" class="btn btn-col genre-button" style="font-size: small; padding: .1rem .3rem; display:inline; background-color: #333333f5">{{ genre }}</small>
+                            {% assign processed_genres = processed_genres | push: genre %}
+                        {% endunless %}
+                    {% endfor %}
+                {% endfor %}
+                {% for post in site.categories.professional-work %}
+                    {% if post %} {% assign genre = post.genre %} {% endif %} 
+                    {% for genre in genre %}
+                        {% unless processed_genres contains genre %}
+                            <small data-genre="{{ genre }}" class="btn btn-col genre-button" style="font-size: small; padding: .1rem .3rem; display:inline; background-color: #333333f5">{{ genre }}</small>
                             {% assign processed_genres = processed_genres | push: genre %}
                         {% endunless %}
                     {% endfor %}
@@ -61,7 +69,7 @@ layout: default
                                 {% if post %} {% assign genre = post.genre %} {% else %} {%
                                 assign genre = page.genre %} {% endif %} {% for
                                 genre in genre %}
-                                <small class="btn btn-col" style="font-size: small; padding: .1rem .3rem; display:inline; background-color: darkslategrey">{{genre}}</small>
+                                <small class="btn btn-col" style="font-size: small; padding: .1rem .3rem; display:inline;">{{genre}}</small>
                                 {% unless forloop.last %}&nbsp;{% endunless %} {% endfor %}
                             </div>
 
@@ -114,7 +122,7 @@ layout: default
                                 {% if post %} {% assign genre = post.genre %} {% else %} {%
                                 assign genre = page.genre %} {% endif %} {% for
                                 genre in genre %}
-                                <small class="btn btn-col" style="font-size: small; padding: .1rem .3rem; display:inline; background-color: darkslategrey">{{genre}}</small>
+                                <small class="btn btn-col" style="font-size: small; padding: .1rem .3rem; display:inline;">{{genre}}</small>
                                 {% unless forloop.last %}&nbsp;{% endunless %} {% endfor %}
                             </div>
 

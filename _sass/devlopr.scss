@@ -67,6 +67,9 @@ html[data-theme="light"] {
         --newsletter-background-color: #222324;
         --button-background-color: #111;
         --header-gradient-color: linear-gradient(to right, #3a3a41, #252525 , #4A4A52 , #313131 , #4A4A52 50% , #5f1f56, #580000);
+        --tag-button-background: #333333f5;
+        --tag-button-highlight: #2b4777bd;
+        --main-highlight-colour: #FF7901
     }
 
     /* Light Mode */
@@ -203,11 +206,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a{
-    color: var(--link-color) !important;
+    color: var(--main-highlight-colour) !important;
 }
 
 small{
-    color: var(--link-color) !important;
+    color: var(--main-highlight-colour) !important;
 }
 
 .jumbotron {
@@ -251,7 +254,7 @@ small{
 
 .main-title{
     font-size: 70px;
-    color: var(--link-color) !important;
+    color: var(--main-highlight-colour) !important;
     margin-top: 140px; //probably not the best way of centering this but should suffice
 }
 .page-title{
@@ -303,7 +306,7 @@ header {
 }
 .featured-card-img-top {
     height: 300px;
-    width: 360px !important; //should be % based
+    width: 300px !important; //should be % based
     object-fit: cover;
 }
 .card-img-small {
@@ -551,6 +554,7 @@ hr {
     letter-spacing: 1px;
     word-spacing: 3px;
     text-decoration: none;
+    margin: 10px;
 }
 
 //Part of the collapsible group items
@@ -654,7 +658,7 @@ header {
 }
 
 .navbar-dark .navbar-brand {
-    color: #ff7601 !important;
+    color: var(--main-highlight-colour) !important;
 }
 .navbar-dark .navbar-nav .nav-link {
     color: var(--nav-link-color) !important;
@@ -1108,7 +1112,7 @@ hr {
         margin-top: 5px;
     }
     .social-link {
-        color: var(--social-link-color) !important;
+        color: var(--main-highlight-colour) !important;
         font-size: 15px;
         padding: 5px;
         margin: 2px;
@@ -1191,7 +1195,7 @@ hr {
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
     width: min-content;
-    height: 48em;    
+    height: 50em;    
     margin: 5px auto !important;
     display: flex;
     flex-direction: column;
@@ -1581,7 +1585,7 @@ footer {
 
 
 .btn-col {
-    background-color: #f8430aa1;
+    background-color: var(--tag-button-highlight);
     color: white !important;
     width: 33.3%;
     box-sizing: border-box;
@@ -1591,7 +1595,7 @@ footer {
     font-size: small !important;
     padding: .1rem .5rem !important;
     display: inline !important;
-    background-color: darkslategrey !important;
+    background-color: var(--tag-button-highlight) !important;
     margin: 10px !important;
 }
  

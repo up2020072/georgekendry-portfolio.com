@@ -47,7 +47,7 @@ layout: compress
       genreButtons.forEach(button => {
           button.addEventListener('click', function () {
               if (selectedGenre.includes(this.dataset.genre)) {
-                  button.style.backgroundColor = 'darkslategrey';
+                  button.style.backgroundColor = 'var(--tag-button-background)';
 
                   selectedGenre = selectedGenre.filter(genre => genre != this.dataset.genre);
               } 
@@ -55,7 +55,7 @@ layout: compress
                 selectedGenre.push(this.dataset.genre);
 
                 genreButtons.forEach(button => {
-                    button.style.backgroundColor = selectedGenre.includes(button.dataset.genre) ? 'red' : 'darkslategrey';
+                    button.style.backgroundColor = selectedGenre.includes(button.dataset.genre) ? 'var(--tag-button-highlight)' : 'var(--tag-button-background)';
                 });
               }
               posts.forEach(post => {

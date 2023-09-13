@@ -1,13 +1,10 @@
 ---
 layout: default
 ---
-<div class="col-lg-12">
+<div class="col-lg-12" style="padding: 20px;">
 <div class="row" style="align-items: flex-start;">
   <div class="col-lg-4">
     <div class="card" id="profile-card">
-      <a href="/">
-        <img src="{{site.url}}{{site.baseurl}}/assets/img/{{ site.author_logo }}" class="profile-img" />
-      </a>
       <h1 class="profile-name">{{ site.title }}</h1>
       <p class="profile-bio">{{ site.subtitle }}</p>
       {% if site.github_username %} {%- include github_follow_button.html -%} {%
@@ -105,7 +102,7 @@ layout: default
   <div class="col-lg-8">
     {% if site.author_bio %}
     <div class="card">
-      <h1 class="card-title">About</h1>
+      <h1 class="card-title">About Me</h1>
       <hr>
       <p>{{ site.author_bio }}</p>
     </div>
@@ -133,7 +130,7 @@ layout: default
       </div>
     </div>
     {% if site.author_education_details.size > 1 and forloop.last == false %}
-      <hr style="background-color: #2e2e2e !important">
+      <hr style="background-color: #2e2e2e !important; margin: 20px;">
     {% endif %}
     {% endfor %}
 
@@ -172,7 +169,7 @@ layout: default
       </div>
     </div>
     {% if site.categories.featured.size > 1 and forloop.last == false %}
-      <hr style="background-color: #2e2e2e !important">
+      <hr style="background-color: #2e2e2e !important; margin: 20px;">
     {% endif %}
     {% endfor %}
     
@@ -201,7 +198,7 @@ layout: default
         </div>
       </div>
       {% if site.author_work_experiences.size > 1 and forloop.last == false %}
-        <hr style="background-color: #2e2e2e !important">
+        <hr style="background-color: #2e2e2e !important; margin: 20px;">
       {% endif %}
       {% endfor %}
     {% endif %}

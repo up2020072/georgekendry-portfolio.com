@@ -87,7 +87,7 @@ layout: default
                             {% if post %} {% assign genre = post.genre %} {% else %} {%
                             assign genre = page.genre %} {% endif %} {% for
                             genre in genre %}
-                            <small class="btn btn-col" style="font-size: small; padding: .1rem .3rem; display:inline; background-color: darkslategrey">{{genre}}</small>
+                            <small class="btn btn-col" style="font-size: small; padding: .1rem .3rem; display:inline;">{{genre}}</small>
                             {% unless forloop.last %}&nbsp;{% endunless %} {% endfor %}
                         </div>
                     </div>
