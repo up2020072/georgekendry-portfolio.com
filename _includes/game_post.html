@@ -2,11 +2,15 @@
     <!---------------------------------------->
     <!--MASTHEAD VIDEO ON BACKGROUND-->
     <!---------------------------------------->
-    <video id="video-background" autoplay muted playsinline loop>
-        <source src="{{ page.showreel }}" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <script>document.getElementById('video-background').play();</script>
+    {% if page.showreel == null %}
+        <img id="video-background" src="{{site.baseurl}}/assets/img/thumbnails/{{page.title}}.png">
+    {% else %}
+        <video id="video-background" autoplay muted playsinline loop>
+            <source src="{{ page.showreel }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <script>document.getElementById('video-background').play();</script>
+    {% endif %}
 
     <!---------------------------------------->
     <!--TEXT AND PROFILE PICTURE-->

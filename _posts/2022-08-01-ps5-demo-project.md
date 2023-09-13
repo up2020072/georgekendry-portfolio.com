@@ -16,7 +16,7 @@ browser_playable: false
 hidden: true
 heading: "insert heading here"
 icon: 
-showreel: /assets/img/showreel_test.mp4
+showreel: 
 itch: 
 isgameembed: false
 gameembed: 
