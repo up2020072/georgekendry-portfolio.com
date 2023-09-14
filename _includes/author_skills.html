@@ -1,2 +1,67 @@
-<p> HTML , CSS , Javascript , PHP, Python, C#</p>
-<p> Unity, Unity DOTS, Git, Linux </p>
+<div class="card">
+    <h4 class="featured-card-title">
+        Languages
+    </h4>
+    <hr>
+    <div class="row" style="justify-content: space-evenly;">
+    {% for item in site.skills_languages %}
+        <div class="card-icon" style="min-width: 110px;">
+            <div class="column-two" style="text-align: center;">
+                <img class="card-img-icon" src="{{site.baseurl}}/assets/img/icons/64px/{{item.skill_thumbnail}}">
+                <p style="text-align: center;"> {{item.skill_name}}</p>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+</div>
+<hr style="background-color: #2e2e2e !important; margin: 20px;">
+<div class="card">
+    <h4 class="featured-card-title">
+        Game Engines
+    </h4>
+    <hr>
+    <div class="row" style="justify-content: space-evenly;">
+    {% for item in site.skills_engines %}
+        <div class="card-icon" style="min-width: 110px;">
+            <div class="column-two" style="text-align: center;">
+                <img class="card-img-icon" src="{{site.baseurl}}/assets/img/icons/64px/{{item.skill_thumbnail}}">
+                <p style="text-align: center;"> {{item.skill_name}}</p>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+</div>
+<hr style="background-color: #2e2e2e !important; margin: 20px;">
+<div class="card">
+    <h4 class="featured-card-title">
+        Integrated Development Enviroments
+    </h4>
+    <hr>
+    <div class="row" style="justify-content: space-evenly;">
+    {% for item in site.skills_enviroments %}
+        <div class="card-icon" style="min-width: 110px;">
+            <div class="column-two" style="text-align: center;">
+                <img class="card-img-icon" src="{{site.baseurl}}/assets/img/icons/64px/{{item.skill_thumbnail}}">
+                <p style="text-align: center;"> {{item.skill_name}}</p>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+</div>
+<hr style="background-color: #2e2e2e !important; margin: 20px;">
+<div class="card">
+    <h4 class="featured-card-title">
+        Project Managment
+    </h4>
+    <hr>
+    <div class="row" style="justify-content: space-evenly;">
+    {% for item in site.skills_project_managment %}
+        <div class="card-icon" style="min-width: 110px;">
+            <div class="column-two" style="text-align: center;">
+                <img class="card-img-icon" src="{{site.baseurl}}/assets/img/icons/64px/{{item.skill_thumbnail}}">
+                <p style="text-align: center;"> {{item.skill_name}}</p>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+</div>

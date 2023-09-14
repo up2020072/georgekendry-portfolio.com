@@ -1,0 +1,129 @@
+<div class="jumbotron" style="text-align: center;">
+    <!---------------------------------------->
+    <!--MASTHEAD VIDEO ON BACKGROUND-->
+    <!---------------------------------------->
+    {% if page.showreel == null %}
+        <img id="video-background" src="{{site.baseurl}}/assets/img/thumbnails/{{page.title}}.png">
+    {% else %}
+        <video id="video-background" autoplay muted playsinline loop>
+            <source src="{{ page.showreel }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <script>document.getElementById('video-background').play();</script>
+    {% endif %}
+
+    <!---------------------------------------->
+    <!--TEXT AND PROFILE PICTURE-->
+    <!----------------------------------------><!-- 
+    <img class="author-profile-img" src="{{ page.icon }}" /> -->
+    <p class="jumbotron-game-title">{{ page.title }}</p>
+    <p class="lead">{{ page.heading }}</p>
+</div>
+
+
+<div class="col-lg-8 offset-md-2">
+    <article class="card" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="card-header">
+            <h2>About the game</h2>
+            <p class="post-meta">{{ page.summary }}</p>
+            <p> Credits:
+                {% for credit in page.credits %}
+                <small class="btn btn-col status-button">{{credit}}</small>
+                {% unless forloop.last %}&nbsp;{% endunless %} {% endfor %}
+            </p>
+            <hr>
+            <div class="table-mobile">
+                <table>
+                    <tr>
+                        <th style="border: 0px !important">Status:</th>
+                        <th style="text-align:right; border: 0px !important"><small class="btn btn-col status-button">{{page.status}}</small></th>
+                    </tr>
+                    <tr>
+                        <th style="border: 0px !important">Project Type:</th>
+                        <th style="text-align:right; border: 0px !important"><small class="btn btn-col status-button">{{page.projecttype}}</small></th>
+                    </tr>
+                    <tr>
+                        <th style="border: 0px !important">Languages Used:</th>
+                        <th style="text-align:right; border: 0px !important"><small class="btn btn-col status-button">{{page.languagesused}}</small></th>
+                    </tr>
+                    <tr>
+                        <th style="border: 0px !important">Tools Used:</th>
+                        <th style="text-align:right; border: 0px !important">
+                            {% for tool in page.tools %}
+                            <small class="btn btn-col status-button">{{tool}}</small>
+                            {% unless forloop.last %}&nbsp;{% endunless %} {% endfor %}
+                        </th>
+                    </tr>
+                    <tr>
+                        <th style="border: 0px !important">Primary Roles:</th>
+                        <th style="text-align:right; border: 0px !important">
+                            {% for role in page.roles %}
+                            <small class="btn btn-col status-button">{{role}}</small>
+                            {% unless forloop.last %}&nbsp;{% endunless %} {% endfor %}
+                        </th>
+                    </tr>
+                </table>
+            </div>
+
+            {% if page.hasRepository == true %}
+            <hr>
+
+            <div style="position: fixed; right: 0; bottom: 0; z-index: 1000000; padding: 10px !important;">
+                <a href="http://github.com/{{ page.repo }}" target="_blank">
+                    <img src="{{ page.ghReadme }}">
+                </a>
+            </div>
+            {% endif %}
+
+        </div>
+
+        <div class="card-body" itemprop="articleBody">
+
+            {% if page.isgameembed == true %}
+                <div class="card-game-embed"style=" padding: 20px; display: flex; justify-content: center; padding-bottom: 56.25%; width: 100%; position: relative;"> 
+                    <iframe frameborder="0" src="{{ page.gameembed }}?color=1c1c1e" allowfullscreen="" ><a href="{{ game.itch }}">Play {{ game.title }} on itch.io</a></iframe> 
+                </div>
+            {% endif %}
+            <hr>
+            {% if page.gamevideo != null %}
+            <!--- ------------------------------------ -->
+            <!--- Embed or Youtube Footage of the game -->
+            <!--- ------------------------------------ -->
+            <div class="video-container" style="padding-top: 0px !important">
+                <iframe src="{{ page.gamevideo }}?controls=0" width="100%" height="500" frameborder="0"></iframe>
+            </div>
+            <hr>
+            {% endif %}
+
+            {% if page.screenshots != null %}
+            <!--- ------------------------------------ -->
+            <!--- Gallery and screenshots for the game -->
+            <!--- ------------------------------------ -->
+            <h3 style="text-align:center; margin-top: 20px; margin-bottom: 20px">Gallery & Screenshots</h3>
+            <div class="panel-heading active" role="tab" id="headingOne">
+                <h2 class="panel-title" style="word-wrap: normal; padding: 15px; background-color: #1b1b1b">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseGameplayScreenshot" aria-expanded="true" aria-controls="collapseGameplayScreenshot" style="font-size: 18px; padding: 0px !important">
+                        Gameplay Screenshots
+                    </a>
+                </h2>
+            </div>
+            <div id="collapseGameplayScreenshot" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-body row" style="justify-content: space-evenly;">
+                    {% if page.screenshots != false %} 
+                        {% assign image_path = '/assets/img/screenshots/' | append: page.title | append: '/' %}
+                        {% for image in site.static_files %}
+                            {% if image.path contains image_path %} 
+                            <div class="widcard col-lg-4" style="background-color: #1c1c1e; margin: 0px !important">
+                                <img src="{{ site.baseurl }}{{ image.path }}" style="max-width: -webkit-fill-available; box-shadow: 0px 0px 20px #202022;">
+                            </div>
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+            <hr>
+            {% endif %}
+            <br />
+        </div>
+    </article>
+</div>

@@ -7,14 +7,14 @@ $mono-typeface: Menlo, Monaco, monospace;
 $text-width: 650px;
 
 html[data-theme="dark"] {
-    --bold-color: rgb(188, 188, 188);
+    --bold-color: rgb(165, 38, 38);
     --box-background-color: hsl(0, 0%, 20%);
     --highlight-color: hsl(0, 0%, 60%);
     --light-border-color: hsl(0, 0%, 30%);
     --light-text-color: rgb(199, 199, 204);
     --link-color: #f69801;
     --link-color-visited: hsl(250, 100%, 60%);
-    --main-background-color: rgb(28, 28, 30);
+    --main-background-color: rgb(30, 28, 30);
     --main-text-color: rgb(139, 139, 139);
     --medium-text-color: hsl(0, 0%, 70%);
     --underline-color: hsl(0, 0%, 50%);
@@ -66,6 +66,10 @@ html[data-theme="light"] {
         --card-background-color: rgb(32, 32, 34);
         --newsletter-background-color: #222324;
         --button-background-color: #111;
+        --header-gradient-color: linear-gradient(to right, #3a3a41, #252525 , #4A4A52 , #313131 , #4A4A52 50% , #5f1f56, #580000);
+        --tag-button-background: #333333f5;
+        --tag-button-highlight: #2b4777bd;
+        --main-highlight-colour: #FF7901
     }
 
     /* Light Mode */
@@ -135,7 +139,7 @@ body {
     hanging-punctuation: first last;
     height: 100%;
     line-height: 1.35em;
-    margin: 0;
+    margin: 40;
     text-rendering: optimizeLegibility;
     padding-top:33px;
     overflow-x:hidden;
@@ -202,7 +206,65 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a{
+    color: var(--main-highlight-colour) !important;
+}
+
+small{
+    color: var(--main-highlight-colour) !important;
+}
+
+.jumbotron {
+    background-color: var(--main-background-color) !important;
+    //background-image: url('https://images.pexels.com/photos/1037992/pexels-photo-1037992.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center mid;
+    position: relative;
+    overflow: hidden;
+    height: 516px;
+    z-index: 1000;
+    background-color: black;
+}
+
+#video-background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+}
+
+.jumbotron-heading{
+    color: #111;
+    font-size: 35px;
+}
+
+.jumbotron-game-title {
+    color: var(--main-highlight-colour);
+    font-size: 50px;
+    margin-top: 120px;
+}
+
+
+.main-title{
+    font-size: 70px;
+    color: var(--main-highlight-colour) !important;
+    margin-top: 140px; //probably not the best way of centering this but should suffice
+}
+.page-title{
+    font-size: 56px;
     color: var(--link-color) !important;
+}
+
+.lead {
+    font-size: 1.30rem !important;
+    font-weight: 600;
 }
 /* Navigation Header */
 header {
@@ -227,11 +289,378 @@ header {
     padding: 20px !important;
     background-color: var(--card-background-color) !important;
 }
+.card-icon {
+    margin: 5px !important;
+    padding: 10px !important;
+    background-color: var(--card-background-color) !important;
+}
+.card-img-icon {
+    height: 64px;
+    width: 64px !important;
+    object-fit: cover;
+}
+.card-img-top {
+    height: 260px;
+    width: 260px !important; //should be % based
+    object-fit: cover;
+}
+.featured-card-img-top {
+    height: 300px;
+    width: 300px !important; //should be % based
+    object-fit: cover;
+}
+.card-img-small {
+    height: 150px;
+    width: 150px !important; //should be % based
+    object-fit: cover;
+}
+li {
+    //margin-top: 15px;
+}
+
+li-n {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 10px; 
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td {
+    border: 1px solid #545454;
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    border: 3px solid #545454;
+    text-align: left;
+    padding: 10px;
+}
+
+.center-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+.center-img2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    padding: 10px;
+}
+
+.center-img3 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center-img-full {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding: 10px;
+}
+
+tr:nth-child(even) {
+    background-color: #1c1c1e;
+}
+
+details {
+    width: 100%;
+}
+
+details > summary 
+{
+    width: 100%;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.podcast-container {
+    position: relative;
+    padding-bottom: 20%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 650px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+    flex: 33.33%;
+    padding: 5px;
+    padding: 0 4px;
+    text-align: center;
+}
+
+/* Create two equal columns that sits next to each other */
+.column-one {
+    flex: 100%;
+    max-width: 100%;
+    padding: 0 4px;
+    text-align: center;
+}
+
+/* Create two equal columns that sits next to each other */
+.column-two {
+    flex: 0 0 auto;
+    //max-width: 50%;
+    padding: 0 4px;
+    text-align: left;
+}
+
+/* Create three equal columns that sits next to each other */
+.column-three {
+    flex: 33.3%;
+    //max-width: 33.3%;
+    padding: 0 4px;
+    text-align: center;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.TextWrap-R
+{
+    float: right;
+    margin: 10px;
+}
+.TextWrap-L {
+    float: left;
+    margin: 10px;
+}
+hr {
+    background-color: #3b3b3b !important;
+    border-top: 2px solid rgba(0,0,0,.1) !important
+}
+.card-cv {
+    padding: 5px !important;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+    .card-cv {
+        width: -webkit-fill-available !important;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+    .column-two { //overrides about page featured projects
+        max-width: 100% !important;
+    }
+    .col-md-2 {
+        display: flex;
+        justify-content: center;
+    }
+    .featured-card-img-top {
+        height: 200px;
+        width: 200px !important; //should be % based
+        object-fit: cover;
+    }
+    .featured-project-card{
+        height: fit-content !important;
+    }
+}
+
+//Part of the collapsible group items
+/*body {
+    padding: 0px;
+    background: #fff;
+}*/
+
+//Part of the collapsible group items
+.wrapper {
+    width: 100%;
+}
+
+iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+@media(max-width:992px) {
+    .wrapper {
+        width: 100%;
+    }
+    .card-game-embed {
+        display: none !important;
+    }
+    .offset-md-2 {
+        margin-left: 0px !important;
+    }
+}
+
+//Part of the collapsible group items
+.panel-heading {
+    padding: 0;
+    border: 0;
+}
+
+//Part of the collapsible group items
+.panel-title > a, .panel-title > a:active {
+    display: block !important;
+    padding: 15px;
+    color: #bbbbbb !important;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    text-decoration: none;
+}
+.panel-title-main {
+    display: block !important;
+    padding: 15px;
+    color: #bbbbbb !important;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    text-decoration: none;
+    margin: 10px;
+}
+
+//Part of the collapsible group items
+.panel-heading a:before {
+    content: "+";
+    float: right;
+    transition: all 0.5s;
+}
+
+//Part of the collapsible group items
+.panel-heading.active a:before {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    transform: rotate(180deg);
+} 
+
+
+/* Navigation Header */
+header {
+    background-color: var(--main-background-color);
+    box-shadow:0px;
+    height: auto;
+    width: 100%;
+    padding: 11px;
+}
+
+
+/* bootstrap override */
+.container-fluid {
+    padding: 0px !important;
+    //width: fit-content !important;
+    width: 100% !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    margin-top: 10px !important;
+}
+.project-card {
+    margin: 10px !important;
+    padding: 15px;
+    background-color: var(--card-background-color) !important;
+    display: inline-table;
+}
+.featured-project-card {
+    margin: 10px !important;
+    padding: 15px;
+    background-color: var(--card-background-color) !important;
+    display: inline-table;
+}
+
+.libcard {
+    margin: 10px !important;
+    padding: 15px;
+    background-color: #292929f5 !important;
+}
+
+.widcard {
+    margin: 10px !important;
+    padding: 15px;
+    background-color: white;
+    text-align: center;
+    border-radius: 25px;
+}
+
+.blogtopcard {
+    margin: 10px !important;
+    padding: 15px;
+    background-color: #1c1c1efc !important;
+}
+
+//This is the status-card for the blogs
+.status-card {
+    margin: 5px !important;
+    padding: 5px !important;
+    //width: fit-content !important;
+    // background-color: var(--card-background-color) !important;
+    border: dashed;
+    border-width: 2px;
+    border-color: orangered;
+}
+
+//This is the control-card for the blogs
+.control-card {
+    margin: 5px !important;
+    padding: 5px !important;
+    //width: fit-content !important;
+    // background-color: var(--card-background-color) !important;
+    border: dashed;
+    border-width: 2px;
+    border-color: rgb(46, 46, 46) !important;
+}
 
 #topNav{
     padding-left: 15%;
     padding-right: 15%;
-    background-color: var(--main-background-color) !important;
+    background: var(--header-gradient-color) !important;
     box-shadow: #000 0px 0px 8px;
 }
 
@@ -240,7 +669,7 @@ header {
 }
 
 .navbar-dark .navbar-brand {
-    color: #ff7601 !important;
+    color: var(--main-highlight-colour) !important;
 }
 .navbar-dark .navbar-nav .nav-link {
     color: var(--nav-link-color) !important;
@@ -254,9 +683,12 @@ header {
     height: 50px;
 }
 
+
 .btn-dark {
-    background-color:var(--button-background-color) !important;
+    background-color: var(--button-background-color) !important;
     color: var(--bold-color) !important;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .img-thumbnail {
@@ -274,8 +706,16 @@ header {
 }
 .card-title {
     margin-bottom: .75rem !important;
+    width: 220px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
-
+.featured-card-title {
+    margin-bottom: .75rem !important;
+    width: 90%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
 /* Search Overlay */
 .icon{
     font-size: 35px;
@@ -427,8 +867,9 @@ header {
 
 #blog-post-container{
     margin-top: 20px;
-    margin-left: -35px;
+    //margin-left: -35px;
 }
+
 
 .snipcart-modal__container {
     position: fixed;
@@ -527,15 +968,6 @@ header {
     margin-left: 20px !important;
 }
 
-.jumbotron-heading{
-    font-size: 35px;
-}
-
-.lead {
-    font-size: 1.30rem !important;
-    font-weight: 600;
-}
-
 .fa {
     display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;
@@ -544,6 +976,13 @@ header {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: coral;
+}
+hr {
+    border: none;
+    height: 3px;
+    background-color: #666666;
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
 }
 
 .product{
@@ -621,9 +1060,9 @@ header {
     padding-left: 50px !important;
 }
 
-// #blog-posts-container{
-//     margin-left:20px !important;
-// }
+#blog-posts-container{
+     //margin-left: -20px !important;
+}
 
 #article-container{
     display: grid;
@@ -684,7 +1123,7 @@ header {
         margin-top: 5px;
     }
     .social-link {
-        color: var(--social-link-color) !important;
+        color: var(--main-highlight-colour) !important;
         font-size: 15px;
         padding: 5px;
         margin: 2px;
@@ -718,6 +1157,24 @@ header {
     }
 }
 
+#lib-images-container {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+#lib-big-image {
+    position: relative; /* position:absolute aligns to the parent container
+                          which in the HTML above is the <div> element */
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+}
+#lib-small-image {
+    position: absolute;
+    bottom: 5px !important;
+    right: 5px !important;
+    z-index: 1;
+}
 
 .company-logo {
     width: 100px;
@@ -738,8 +1195,55 @@ header {
     margin: 20px auto !important;
 }
 
+.project-post {
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+    //width: 15%;
+    height: auto;    
+    margin: 5px auto !important;
+}
+.featured-project-post {
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+    width: min-content;
+    height: 50em;    
+    margin: 5px auto !important;
+    display: flex;
+    flex-direction: column;
+}
+.card-body-footer{
+    flex-shrink: 0; /* this ensures that the footer doesn't shrink */
+    margin-top: auto;
+}
+
 .blog-post:hover {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.lib-post {
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+    //width: 30%;
+    width: 25%;
+    height: auto;
+    margin: 20px auto !important;
+}
+.lib-post:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.lib-top {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+    //width: 30%;
+    width: 25%;
+    height: auto;
+    margin: 20px auto !important;
+    margin-top: 0px !important;
+    max-height: 100px;
+}
+.lib-top:hover {
+    box-shadow: 0 18px 30px rgba(0, 0, 0, 0.25), 0 12px 12px rgba(0, 0, 0, 0.22);
 }
 
 
@@ -795,7 +1299,7 @@ footer {
     .main-container{
         margin-left: auto;
         margin-right: auto;
-        width: 70%;
+        width: 100%;
     }
 }
 
@@ -878,7 +1382,10 @@ footer {
 
             }
             .jumbotron {
-                padding: 10rem 1rem !important;
+                //padding: 10rem 1rem !important;
+            }
+            .card-subtitle {
+                text-align: left;
             }
 
 }
@@ -960,6 +1467,9 @@ footer {
       .jumbotron {
           padding: 10rem 1rem !important;
       }
+      .card-subtitle {
+          text-align: left;
+      }
 
 }
 
@@ -1029,6 +1539,9 @@ footer {
                 width: auto;
                 float:left;
             }
+            .card-subtitle {
+                text-align: left;
+            }
  }
 
 
@@ -1039,6 +1552,7 @@ footer {
     font-size: 15px !important;
     line-height: 20px !important;
 }
+
 
  .switch {
      position: relative;
@@ -1079,6 +1593,26 @@ footer {
      animation: off .7s forwards cubic-bezier(.8, .5, .2, 1.4);
      box-shadow: inset 5px -5px 4px rgba(53, 53, 53, 0.3);
  }
+
+
+.btn-col {
+    background-color: var(--tag-button-highlight);
+    color: white !important;
+    width: 33.3%;
+    box-sizing: border-box;
+}
+
+.status-button {
+    font-size: small !important;
+    padding: .1rem .5rem !important;
+    display: inline !important;
+    background-color: var(--tag-button-highlight) !important;
+    margin: 10px !important;
+}
+ 
+.genre-button{
+    color: white !important;
+}
 
  @keyframes off {
      0% {

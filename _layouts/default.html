@@ -10,8 +10,6 @@ layout: compress
         <div class="main-container">
             {{ content }}
         </div>
-         <div class="col-lg-12" id="newsletter_footer">
-               {%- include blog_newsletter.html -%}
          </div>
         {%- include footer.html -%}
      <script>
@@ -38,5 +36,39 @@ layout: compress
       });
     }
   </script>
+
+  {% if page.url == "/projects/" %}
+  <script>
+      document.addEventListener('DOMContentLoaded', function () {
+      const genreButtons = document.querySelectorAll('.genre-button');
+      const posts = document.querySelectorAll('.project-post');
+
+      let selectedGenre = [];
+
+      genreButtons.forEach(button => {
+          button.addEventListener('click', function () {
+              if (selectedGenre.includes(this.dataset.genre)) {
+                  button.style.backgroundColor = 'var(--tag-button-background)';
+
+                  selectedGenre = selectedGenre.filter(genre => genre != this.dataset.genre);
+              } 
+              else {
+                selectedGenre.push(this.dataset.genre);
+
+                genreButtons.forEach(button => {
+                    button.style.backgroundColor = selectedGenre.includes(button.dataset.genre) ? 'var(--tag-button-highlight)' : 'var(--tag-button-background)';
+                });
+              }
+              posts.forEach(post => {
+                  const postGenres = post.dataset.genres.split(',');
+                  post.style.display = (selectedGenre.length == 0 || postGenres.some(genre => selectedGenre.includes(genre))) ? 'block' : 'none';
+              });
+              console.log(selectedGenre);
+          });
+      });
+  });
+
+  </script>
+  {% endif %}
   </body>
 </html>
