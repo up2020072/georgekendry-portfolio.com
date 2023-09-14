@@ -80,8 +80,8 @@
         <div class="card-body" itemprop="articleBody">
 
             {% if page.isgameembed == true %}
-                <div class="card-game-embed">
-                    <div style=" padding: 20px; display: flex; justify-content: center; padding-bottom: 56.25%; width: 100%; position: relative;"> <iframe frameborder="0" src="{{ page.gameembed }}?color=1c1c1e" allowfullscreen=""><a href="{{ game.itch }}">Play {{ game.title }} on itch.io</a></iframe> </div>
+                <div class="card-game-embed"style=" padding: 20px; display: flex; justify-content: center; padding-bottom: 56.25%; width: 100%; position: relative;"> 
+                    <iframe frameborder="0" src="{{ page.gameembed }}?color=1c1c1e" allowfullscreen="" ><a href="{{ game.itch }}">Play {{ game.title }} on itch.io</a></iframe> 
                 </div>
             {% endif %}
             <hr>
