@@ -22,9 +22,25 @@
 
 
 <div class="col-lg-8 offset-md-2">
+    <!-- this should be in a different colour or have some way of being visually distinct -->
+    <!-- need to check how much info can be given out, particuarily regarding credits. tools/languages/roles probably fine -->
+    <!-- look through the qinetiq nda docs in detail. ps5 nda whereabouts unkown. potentially err on the side of caution and just show nda pop-up-->
+    {% if page.hasNDA == true %}
+        <div class="card">
+            <h2>NDA disclosure</h2>
+            <p class="post-meta">include statement here explaining that this project is under an NDA, and as of such cannot be discussed in detail </p>
+        </div>
+    {% endif %}
     <article class="card" itemscope itemtype="http://schema.org/BlogPosting">
         <div class="card-header">
             <h2>About the game</h2>
+            {% if page.hasRepository == true %}
+            <div class="project-card project-post" style="position: fixed; right: 0; bottom: 0; z-index: 1000000; padding: 10px !important; border-radius: 20px;">
+                <a href="http://github.com/{{ page.repo }}" target="_blank">
+                    <i class="fab fa-github fa-2xl"></i>
+                </a>
+            </div>
+            {% endif %}
             <p class="post-meta">{{ page.summary }}</p>
             <p> Credits:
                 {% for credit in page.credits %}
@@ -64,17 +80,6 @@
                     </tr>
                 </table>
             </div>
-
-            {% if page.hasRepository == true %}
-            <hr>
-
-            <div style="position: fixed; right: 0; bottom: 0; z-index: 1000000; padding: 10px !important;">
-                <a href="http://github.com/{{ page.repo }}" target="_blank">
-                    <img src="{{ page.ghReadme }}">
-                </a>
-            </div>
-            {% endif %}
-
         </div>
 
         <div class="card-body" itemprop="articleBody">
@@ -95,7 +100,7 @@
             <hr>
             {% endif %}
 
-            {% if page.screenshots != null %}
+            {% if page.screenshots != false %}
             <!--- ------------------------------------ -->
             <!--- Gallery and screenshots for the game -->
             <!--- ------------------------------------ -->

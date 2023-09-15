@@ -21,7 +21,7 @@ itch:
 isgameembed: false
 gameembed: 
 status: "Ongoing"
-projecttype: "Game Jam"
+projecttype: "Project"
 languagesused: ['C#']
 tools: ['Unity DOTS']
 roles: ['Programming', 'Art', 'Design']
@@ -33,4 +33,6 @@ description: <ul>
                 <li>Worked on creating immersive procedural terrain generation using Perlin noise</li>
                 <li>Developed and optimised a save system to ensure maximum data compression</li>
              </ul>
+hasRepository: true
+repo: up2020072/Final-Year-Project
 ---

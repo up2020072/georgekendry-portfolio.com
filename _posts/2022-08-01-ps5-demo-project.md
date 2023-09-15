@@ -14,7 +14,7 @@ usemathjax: true
 genre: ['C++', 'PS5', 'Console']
 browser_playable: false
 hidden: true
-heading: "insert heading here"
+heading:
 icon: 
 showreel: 
 itch: 
@@ -22,7 +22,7 @@ isgameembed: false
 gameembed: 
 hasNDA: true
 status: "Complete"
-projecttype: "Client Project"
+projecttype: "Prototype"
 languagesused: ['C++']
 tools: ['PS5 Dev Kit']
 roles: ['Programmer']
@@ -34,4 +34,7 @@ description: <ul>
                 <li>Learned and gained experience with various profiling tools for PS5</li>
                 <li>Navigated through the challenges of on-site work with dev kits</li>
              </ul>
+further_info: true
+further_info_tag: ps5
+further_info_page: nda_popup.html
 ---
