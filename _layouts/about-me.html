@@ -145,12 +145,31 @@ layout: default
     <div class="card">
       <div class="row" style="justify-content: space-between;">
         <div class="col-md-6">
-          <a href="{{ post.url | prepend: site.baseurl }}" target="_blank" style="margin: 0px; padding: 0px; text-decoration:none">
-            <a href="{{ post.url | prepend: site.baseurl }}" data-disqus-identifier="{{ post.url }}" style="padding: 0px">
-                <h4 class="featured-card-title">
-                    {{post.title}}
-                </h4>
-            </a>
+          {% if post.further_info == true %}
+          <a href="" target="_blank" data-toggle="modal" data-target="#exampleModalLong{{post.further_info_tag}}" style="padding: 0px">
+              <h4 class="featured-card-title">
+                  {% if post.hasNDA == true %}
+                      <i class="fa-solid fa-lock"></i>
+                  {% endif %}
+                  {{post.title}}
+              </h4>
+          </a>
+          {% else %}
+          <a href="{{ post.url | prepend: site.baseurl }}" data-disqus-identifier="{{ post.url }}" style="padding: 0px">
+              <h4 class="featured-card-title">
+                  {% if post.hasRepository == true %}
+                      <i class="fab fa-github"></i>
+                  {% endif %}
+                  {% if post.hasNDA == true %}
+                      <i class="fa-solid fa-lock"></i>
+                  {% endif %}
+                  {{post.title}}
+                  {% if post.browser_playable == true %}
+                      <i class="fa-solid fa-gamepad fa-lg" style="margin-left: 5px;" ></i>
+                  {% endif %}
+              </h4>
+          </a>
+          {% endif %}
         </div>
         <div class="col-md-6" style="vertical-align:top; text-align:right">
           <h6 class="card-subtitle mb-2 text-muted">{{ post.date | date: "%b %-d, %Y" }}</h6>
@@ -168,6 +187,23 @@ layout: default
         </div>
       </div>
     </div>
+    {% if post.further_info == true %}
+      <div class="modal fade" id="exampleModalLong{{post.further_info_tag}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+              <div class="modal-content" style="background-color: #202022 !important">
+                  <div class="modal-header" style="border-bottom-color: #2e2e2e !important">
+                      <h5 class="modal-title" id="exampleModalLongTitle">Further Information</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                  <div class="modal-body">
+                      {%- include {{post.further_info_page}} -%}
+                  </div>
+              </div>
+          </div>
+      </div>
+    {% endif %}
     {% if site.categories.featured.size > 1 and forloop.last == false %}
       <hr style="background-color: #2e2e2e !important; margin: 20px;">
     {% endif %}

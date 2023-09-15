@@ -21,7 +21,7 @@ itch:
 isgameembed: false
 gameembed: 
 status: "Complete"
-projecttype: "Game Jam"
+projecttype: "Project"
 languagesused: ['C#']
 tools: ['Unity']
 roles: ['Programming','Art','Design']
@@ -32,4 +32,6 @@ description: <ul>
                 <li>Developed a custom maths library to facilitate unique gameplay elements</li>
                 <li>Ensured UI/UX design was intuitive and responsive for mobile</li>
              </ul>
+hasRepository: true
+repo: up2020072/TARP-incremental-game
 ---

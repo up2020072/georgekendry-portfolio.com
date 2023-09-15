@@ -34,4 +34,7 @@ description: <ul>
                 <li>Implemented menu and gameplay UI</li>
                 <li>Worked on a variety of disciplines within the team</li>
              </ul>
+further_info: true
+further_info_tag: ps5
+further_info_page: nda_popup.html
 ---
