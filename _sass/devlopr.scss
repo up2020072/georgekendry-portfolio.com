@@ -7,14 +7,17 @@ $mono-typeface: Menlo, Monaco, monospace;
 $text-width: 650px;
 
 html[data-theme="dark"] {
-    --bold-color: rgb(165, 38, 38);
+    --bold-color: rgb(188, 188, 188);
     --box-background-color: hsl(0, 0%, 20%);
     --highlight-color: hsl(0, 0%, 60%);
     --light-border-color: hsl(0, 0%, 30%);
     --light-text-color: rgb(199, 199, 204);
     --link-color: #f69801;
+    --nav-color: #131313;
+    --search-color: #FF7901;
+    --nav-link-color: rgba(255, 255, 255, .5);
     --link-color-visited: hsl(250, 100%, 60%);
-    --main-background-color: rgb(30, 28, 30);
+    --main-background-color: rgb(28, 28, 30);
     --main-text-color: rgb(139, 139, 139);
     --medium-text-color: hsl(0, 0%, 70%);
     --underline-color: hsl(0, 0%, 50%);
@@ -22,6 +25,7 @@ html[data-theme="dark"] {
     --card-background-color: rgb(32, 32, 34);
     --newsletter-background-color: #222324;
     --button-background-color: #111;
+    --header-gradient-color: linear-gradient(to right, #3a3a41, #252525 , #4A4A52 , #313131 , #4A4A52 50% , #5f1f56, #580000);
     --tag-button-background: #333333f5;
     --tag-button-highlight: #2b4777bd;
     --main-highlight-colour: #FF7901
