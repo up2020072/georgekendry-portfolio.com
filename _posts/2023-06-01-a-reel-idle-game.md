@@ -1,6 +1,6 @@
 ---
 layout: game
-title:  "A Reel Idle Game"
+title:  "Tidal Tycoon"
 type: "Game Development Blog"
 color: "background-color: seagreen"
 summary: "Fishing themed Incremental game developed for Android."
