@@ -9,7 +9,7 @@ date: '2023-06-01'
 category: ['game-development','featured']
 thumbnail:
 keywords: C#, Unity, incremental, mobile, project
-permalink: /games/a-reel-idle-game/
+permalink: /games/tidal-tycoon/
 usemathjax: true
 genre: ['C#', 'Unity', 'Mobile']
 browser_playable: false
