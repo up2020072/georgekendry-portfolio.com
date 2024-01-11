@@ -128,6 +128,13 @@
             </div>
             <hr>
             {% endif %}
+            {% if page.privacyPolicy != null %}
+            <div class="modal-body">
+                <a href="{{ page.privacyPolicy | prepend: site.baseurl }}" data-disqus-identifier="{{ page.privacyPolicy }}" style="padding: 0px">
+                    <p style="text-align:center; margin-top: 20px; margin-bottom: 20px">Privacy Policy</p>
+                </a>
+            </div>
+            {% endif %}
             <br />
         </div>
     </article>
