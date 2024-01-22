@@ -35,4 +35,5 @@ description: <ul>
 hasRepository: true
 repo: up2020072/TARP-incremental-game
 privacyPolicy: /privacy-policy
+termsAndConditions: /terms-of-service
 ---

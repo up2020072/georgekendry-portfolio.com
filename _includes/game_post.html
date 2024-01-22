@@ -135,6 +135,13 @@
                 </a>
             </div>
             {% endif %}
+            {% if page.termsAndConditions != null %}
+            <div class="modal-body">
+                <a href="{{ page.termsAndConditions | prepend: site.baseurl }}" data-disqus-identifier="{{ page.termsAndConditions }}" style="padding: 0px">
+                    <p style="text-align:center; margin-top: 20px; margin-bottom: 20px">Terms & Conditions</p>
+                </a>
+            </div>
+            {% endif %}
             <br />
         </div>
     </article>
