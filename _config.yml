@@ -191,7 +191,10 @@ collections:
 defaults:
   - scope:
       path: "" # An empty path applies to all files
-      type: posts # Applies to all posts
+      type: "posts" # Applies to all posts
+    values:
+      layout: page
+      title: "Untitled Post" # Placeholder title
   -
     scope:
       path: "gallery"
