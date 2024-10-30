@@ -189,6 +189,9 @@ collections:
     output: true
 
 defaults:
+  - scope:
+      path: "" # An empty path applies to all files
+      type: posts # Applies to all posts
   -
     scope:
       path: "gallery"
