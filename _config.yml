@@ -16,6 +16,8 @@ urls:
       url: /projects
     - text: CV
       url : /cv
+    - text: Blog
+      url : /blog
 
 
 # Edit Author details (For multi authors check _data/authors.yml)
