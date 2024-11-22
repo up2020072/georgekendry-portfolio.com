@@ -193,8 +193,9 @@ defaults:
       path: "" # An empty path applies to all files
       type: "posts" # Applies to all posts
     values:
-      layout: page
+      layout: post
       title: "Untitled Post" # Placeholder title
+      thumbnail: /assets/img/thumbnails/blog.png
   -
     scope:
       path: "gallery"

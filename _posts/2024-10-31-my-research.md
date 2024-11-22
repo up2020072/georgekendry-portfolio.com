@@ -1,11 +1,15 @@
 ---
 title: My Research
+thumbnail: "/assets/img/thumbnails/blog.png"
+type: "Dissertation Blog"
+roles: ['Dissertation']
 ---
 
 ## Field of Study and Research Proposal Summary
 
 As part of my MSc in Computer Science, my research focuses on **deep learning applications in retinal imaging** for the **early detection and preventative screening of Alzheimer’s Disease (AD)**. Alzheimer's, the most common cause of dementia, affects millions globally. Traditional diagnostic methods, like MRI and PET scans, are often costly and inaccessible, particularly in under-resourced areas. Given this challenge, retinal imaging has emerged as a promising, non-invasive alternative due to the retina’s anatomical and physiological connection to the brain.
 
+![cat picture](https://t3.ftcdn.net/jpg/02/36/99/22/360_F_236992283_sNOxCVQeFLd5pdqaKGh8DRGMZy7P4XKm.jpg)
 ## Project Overview
 
 The purpose of my research is to conduct a **systematic review** of current deep learning models used in retinal imaging to detect Alzheimer's-related retinal biomarkers. These biomarkers include **retinal nerve fibre layer (RNFL) thinning, retinal vascular changes,** and **amyloid-beta deposition** — all indicators potentially linked to AD. Through this review, I aim to evaluate the performance of these models, identify existing research gaps, and provide recommendations for standardising methodologies in this emerging field.

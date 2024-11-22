@@ -331,6 +331,7 @@ li {
     //margin-top: 15px;
 }
 
+
 li-n {
     padding-left: 20px;
     padding-right: 20px;
@@ -883,6 +884,53 @@ header {
     //margin-left: -35px;
 }
 
+.post-navigation {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    align-items: center; /* Align the buttons and text vertically */
+    gap: 10px; /* Space between buttons */
+    margin-top: 20px; /* Space above the navigation */
+    background-color: var(--card-background-color); /* Background that blends with the card design */
+    padding: 10px 20px; /* Optional: Padding for the navigation container */
+    border-radius: 5px; /* Smooth corners for the navigation */
+    border: 1px solid var(--light-border-color); /* Subtle border to match the theme */
+}
+
+.post-navigation .btn,
+.post-navigation .disabled {
+    display: inline-block;
+    text-align: center;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 14px; /* Match the general font size */
+    line-height: 1.5; /* Consistent vertical alignment */
+    border-radius: 5px; /* Smooth button corners */
+    border: 1px solid var(--light-border-color); /* Border matching the light theme */
+    background-color: var(--button-background-color); /* Button background from your palette */
+    color: var(--light-text-color); /* Text colour for better readability */
+    transition: background-color 0.3s, color 0.3s; /* Smooth hover effects */
+}
+
+.post-navigation .btn:hover {
+    background-color: var(--tag-button-highlight); /* Highlight effect on hover */
+    color: var(--social-link-color); /* Bright text colour for hover */
+}
+
+.post-navigation .btn.disabled,
+.post-navigation .disabled {
+    pointer-events: none; /* Disable interaction for non-links */
+    opacity: 0.5; /* Make disabled buttons visually distinct */
+    color: var(--main-text-color); /* Use a muted colour for disabled state */
+    background-color: var(--box-background-color); /* Blend disabled buttons with the theme */
+}
+
+.post-navigation .btn:visited {
+    color: var(--link-color-visited); /* Visited link colour */
+}
+
+.post-navigation .btn:active {
+    background-color: var(--search-color); /* Active state background */
+}
 
 .snipcart-modal__container {
     position: fixed;
@@ -1206,6 +1254,13 @@ hr {
     width: 45%;
     height: auto;
     margin: 20px auto !important;
+}
+
+.blog-img-top {
+    width: 100%; /* Make the image take full width of the container */
+    height: 300px; /* Ensure the image fills the container's height */
+    object-fit: cover; /* Scale image to fill the space without distortion */
+    object-position: center; /* Center the image within its container */
 }
 
 .project-post {
