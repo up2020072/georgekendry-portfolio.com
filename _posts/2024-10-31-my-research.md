@@ -1,11 +1,10 @@
 ---
-title: My Research
+title: 'Week 1: Field of Study and Research Proposal Summary'
 thumbnail: "/assets/img/thumbnails/blog.png"
-type: "Dissertation Blog"
-roles: ['Dissertation']
+type: Dissertation Blog
+roles:
+- Dissertation
 ---
-
-## Field of Study and Research Proposal Summary
 
 As part of my MSc in Computer Science, my research focuses on **deep learning applications in retinal imaging** for the **early detection and preventative screening of Alzheimer’s Disease (AD)**. Alzheimer's, the most common cause of dementia, affects millions globally. Traditional diagnostic methods, like MRI and PET scans, are often costly and inaccessible, particularly in under-resourced areas. Given this challenge, retinal imaging has emerged as a promising, non-invasive alternative due to the retina’s anatomical and physiological connection to the brain.
 
